@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Panafiul</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">Panafiul</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Contacto/banner.jpg');">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>Estamos para ayudarte con tus proyectos industriales</p>
+        </div>
+    </div>
+
+    <!-- Formulario y Contacto -->
+    <section class="bg-gray">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Formulario -->
+                <div class="contact-form">
+                    <h2 style="color: #1e3a8a; margin-bottom: 1.5rem;">Envíanos tu Consulta</h2>
+                    <p style="color: #64748b; margin-bottom: 2rem;">
+                        Completá el formulario y te responderemos a la brevedad. También podés contactarnos directamente por teléfono o WhatsApp.
+                    </p>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Nombre y Apellido *</label>
+                            <input type="text" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <input type="text" placeholder="Nombre de tu empresa (opcional)">
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono *</label>
+                            <input type="tel" required placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Consulta</label>
+                            <select>
+                                <option>Cotización</option>
+                                <option>Información de Producto</option>
+                                <option>Asesoramiento Técnico</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensaje *</label>
+                            <textarea required placeholder="Contanos en qué podemos ayudarte. Si es una cotización, incluí la mayor cantidad de detalles posible (tipo de producto, medidas, cantidades, aplicación, etc.)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Consulta</button>
+                    </form>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
+                        * Campos obligatorios
+                    </p>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info-box">
+                    <h2 style="color: #1e3a8a; margin-bottom: 1.5rem;">Información de Contacto</h2>
+                    
+                    <div class="info-item">
+                        <h4><span class="info-icon">📞</span> Teléfono</h4>
+                        <p><strong>Ventas:</strong> +54 11 6080-9144</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><span class="info-icon">📧</span> Emails</h4>
+                        <p><strong>Ventas:</strong> ventas@panafiul.com.ar</p>
+                        <p><strong>Información:</strong> info@panafiul.com.ar</p>
+                        <p><strong>General:</strong> panafiulsrl@yahoo.com.ar</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><span class="info-icon">🕐</span> Horarios de Atención</h4>
+                        <p><strong>Lunes a Viernes:</strong></p>
+                        <p>10:00 - 18:00</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4><span class="info-icon">💬</span> WhatsApp</h4>
+                        <p><strong>+54 9 11 6908-2624</strong></p>
+                        <p><strong>+54 9 11 4157-6110</strong></p>
+                        <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">
+                            Respondemos consultas de Lunes a Viernes de 10:00 a 18:00hs
+                        </p>
+                        <a href="https://wa.me/549119082624" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center;">
+                            Chatear por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="bg-blue">
+        <div class="container">
+            <h2 class="section-title">¿Necesitás una Cotización?</h2>
+            <p class="section-subtitle">Te respondemos a la brevedad</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#contactForm" class="btn btn-primary">Solicitar Cotización Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div class="footer-content">
+                <div class="footer-section" style="width: 400px !important;">
+                    <h4>Panafiul</h4>
+                    <span style="color: #cbd5e1; margin-top: 1rem;">
+                        Soluciones industriales de calidad desde 2000. 
+                        Tu socio confiable en mangueras y accesorios.
+                    </span>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="empresa.html">La Empresa</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📞 +54 11 6080-9144</li>
+                        <li>📧 info@panafiul.com.ar</li>
+                        <li>📍 Buenos Aires, Argentina</li>
+                        <li>🕐 Lun-Vie: 10:00-17:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Panafiul S.R.L. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
