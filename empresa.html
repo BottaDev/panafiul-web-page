@@ -21,12 +21,12 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             text-align: center;
             transition: all 0.3s ease;
-            border-top: 4px solid #16a34a;
+            border-top: 4px solid #10b981;
         }
 
         .valor-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.2);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
         }
 
         .valor-icon {
@@ -35,7 +35,7 @@
         }
 
         .valor-card h3 {
-            color: #16a34a;
+            color: #334155;
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
@@ -53,6 +53,29 @@
             border-radius: 10px 10px 0 0;
             margin: 0 0 1.5rem 0;
             display: block;
+        }
+
+        /* Estilos específicos para texto de Quiénes Somos */
+        .intro-text-primary {
+            font-size: 1.15rem;
+            color: #10b981;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text-secondary {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Títulos de sectores */
+        .sector-title {
+            color: #334155;
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -92,19 +115,19 @@
         <div class="container">
             <h2 class="section-title">Quiénes Somos</h2>
             <div style="max-width: 900px; margin: 2rem auto;">
-                <p style="font-size: 1.15rem; color: #16a34a; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                <p class="intro-text-primary">
                     <strong>PANAFIUL S.R.L.</strong> es una empresa dedicada a desarrollar <strong>SERVICIOS PARA LA INDUSTRIA</strong> 
                     y a <strong>PROVEER</strong> productos para la <strong>CONDUCCIÓN, CONTROL Y SELLADO DE FLUIDOS.</strong>
                 </p>
                 
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                <p class="intro-text-secondary">
                     Nuestra propuesta es ofrecer un <strong>SERVICIO INTEGRAL DE SOLUCIONES</strong> para el Departamento de Compras, 
                     aligerando el tiempo que les ocupa buscar cada material en distintos rubros, concentrando varios productos 
                     en un mismo proveedor, a fin de obtener compatibilidad entre las diferentes mercaderías y reducir costos 
                     asociados a procesos administrativos, traslados, fletes y tiempos de entrega.
                 </p>
 
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.8; text-align: justify;">
+                <p class="intro-text-secondary">
                     Nuestros productos están construidos especialmente adecuándose a las <strong>Normas de Seguridad</strong> 
                     y a los usos y aplicaciones de <strong>CADA INDUSTRIA EN PARTICULAR</strong>.
                 </p>
@@ -167,55 +190,55 @@
             <div class="grid-3">
                 <div class="card">
                     <img src="Imagenes/Empresa/Alimenticia.jpg" alt="Industria Alimenticia" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Industria Alimenticia</h3>
+                    <h3 class="sector-title">Industria Alimenticia</h3>
                     <p>Mangueras y accesorios aptos para contacto con alimentos, certificados FDA y con todas las homologaciones sanitarias necesarias.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Quimica.jpg" alt="Industria Química" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Industria Química</h3>
+                    <h3 class="sector-title">Industria Química</h3>
                     <p>Productos resistentes a ácidos, bases, solventes y productos químicos agresivos, con alta durabilidad y seguridad.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Petroquimica.jpg" alt="Petroquímica" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Petroquímica</h3>
+                    <h3 class="sector-title">Petroquímica</h3>
                     <p>Mangueras especializadas para hidrocarburos, altas presiones y temperaturas extremas, cumpliendo normativas internacionales.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Automotriz.jpg" alt="Automotriz" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Automotriz</h3>
+                    <h3 class="sector-title">Automotriz</h3>
                     <p>Componentes para sistemas hidráulicos, refrigeración, combustible y aire en talleres mecánicos y plantas de producción.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Mineria.jpg" alt="Minería" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Minería</h3>
+                    <h3 class="sector-title">Minería</h3>
                     <p>Equipamiento ultra resistente para condiciones extremas de trabajo, abrasión, presión y ambientes hostiles.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Agroindustria.jpg" alt="Agroindustria" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Agroindustria</h3>
+                    <h3 class="sector-title">Agroindustria</h3>
                     <p>Soluciones para riego, pulverización, transporte de granos, fertilizantes y productos agrícolas diversos.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Construccion.jpg" alt="Construcción" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Construcción</h3>
+                    <h3 class="sector-title">Construcción</h3>
                     <p>Mangueras para hormigoneras, compresores, herramientas neumáticas y sistemas hidráulicos de maquinaria pesada.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Metalurgica.jpg" alt="Metalúrgica" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Metalúrgica</h3>
+                    <h3 class="sector-title">Metalúrgica</h3>
                     <p>Productos resistentes a altas temperaturas, aceites industriales y condiciones severas de trabajo continuo.</p>
                 </div>
 
                 <div class="card">
                     <img src="Imagenes/Empresa/Farmaceutica.jpg" alt="Farmacéutica" class="sector-image">
-                    <h3 style="color: #16a34a; margin-bottom: 1rem;">Farmacéutica</h3>
+                    <h3 class="sector-title">Farmacéutica</h3>
                     <p>Materiales certificados para ambientes controlados, esterilizables y con trazabilidad completa de fabricación.</p>
                 </div>
             </div>
@@ -224,11 +247,12 @@
 
     <!-- CTA -->
     <section class="bg-blue">
-        <div class="container">
-            <h2 class="section-title">¿Querés conocer más sobre nuestros servicios?</h2>
-            <p class="section-subtitle">Contactanos y te asesoramos sin compromiso</p>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="contacto.html" class="btn btn-primary">Contactar Ahora</a>
+        <div class="container" style="text-align: center;">
+            <h3>¿Querés conocer más sobre nuestros servicios?</h3>
+            <p>Contactanos y te asesoramos sin compromiso</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+                <a href="https://wa.me/549119082624" class="btn btn-secondary">Chatear por WhatsApp</a>
             </div>
         </div>
     </section>

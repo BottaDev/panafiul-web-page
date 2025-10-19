@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -22,8 +22,6 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
-
-/* (header banner removed - using hero background image instead) */
 
 .header-content {
     max-width: 1200px;
@@ -42,7 +40,7 @@ header {
 }
 
 .logo span {
-    color: #fbbf24;
+    color: #10b981;
 }
 
 nav ul {
@@ -60,7 +58,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #fbbf24;
+    color: #10b981;
 }
 
 .menu-toggle {
@@ -74,11 +72,10 @@ nav a.active {
 
 /* Hero Section */
 .hero {
-    /* layered backgrounds: dark overlay, per-page banner image (set via --hero-banner), and green gradient */
     background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         var(--hero-banner, none),
-        linear-gradient(135deg, rgba(22, 163, 74, 0.95) 0%, rgba(34, 197, 94, 0.9) 100%);
+        linear-gradient(135deg, rgba(51, 65, 85, 0.95) 0%, rgba(71, 85, 105, 0.9) 100%);
     background-size: cover;
     background-position: center;
     color: white;
@@ -119,14 +116,14 @@ nav a.active {
 }
 
 .btn-primary {
-    background: #fbbf24;
-    color: #16a34a;
+    background: #10b981;
+    color: white;
 }
 
 .btn-primary:hover {
-    background: #f59e0b;
+    background: #059669;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
 }
 
 .btn-secondary {
@@ -137,7 +134,7 @@ nav a.active {
 
 .btn-secondary:hover {
     background: white;
-    color: #16a34a;
+    color: #334155;
     transform: translateY(-2px);
 }
 
@@ -149,7 +146,7 @@ section {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #16a34a;
+    color: #334155;
     text-align: center;
 }
 
@@ -199,13 +196,13 @@ section {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #22c55e;
+    color: #10b981;
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #16a34a;
+    color: #334155;
     text-align: center;
 }
 
@@ -245,8 +242,21 @@ section {
     background: white;
 }
 
+.bg-dark {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    color: white;
+}
+
+.bg-dark .section-title {
+    color: white;
+}
+
+.bg-dark .section-subtitle {
+    color: rgba(255,255,255,0.9);
+}
+
 .bg-blue {
-    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
     color: white;
 }
 
@@ -268,12 +278,12 @@ section {
     padding: 2rem;
     background: white;
     margin: 2rem 0;
-    border-left: 4px solid #22c55e;
+    border-left: 4px solid #10b981;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .timeline-item h3 {
-    color: #16a34a;
+    color: #334155;
     margin-bottom: 0.5rem;
 }
 
@@ -294,10 +304,10 @@ section {
 }
 
 .category-section h3 {
-    color: #16a34a;
+    color: #334155;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #fbbf24;
+    border-bottom: 3px solid #10b981;
     padding-bottom: 0.5rem;
 }
 
@@ -312,11 +322,11 @@ section {
     padding: 1.5rem;
     background: #f8fafc;
     border-radius: 8px;
-    border-left: 4px solid #22c55e;
+    border-left: 4px solid #10b981;
 }
 
 .product-item h4 {
-    color: #16a34a;
+    color: #334155;
     margin-bottom: 0.5rem;
 }
 
@@ -342,7 +352,7 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #16a34a;
+    color: #334155;
     font-weight: 600;
 }
 
@@ -362,7 +372,7 @@ section {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #22c55e;
+    border-color: #10b981;
 }
 
 .form-group textarea {
@@ -385,7 +395,7 @@ section {
 }
 
 .info-item h4 {
-    color: #16a34a;
+    color: #334155;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -417,7 +427,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: #fbbf24;
+    color: #10b981;
     margin-bottom: 1rem;
 }
 
@@ -436,7 +446,7 @@ footer {
 }
 
 .footer-section a:hover {
-    color: #fbbf24;
+    color: #10b981;
 }
 
 .footer-bottom {
@@ -482,7 +492,7 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: #16a34a;
+        background: #334155;
         flex-direction: column;
         padding: 1rem;
         gap: 0;
