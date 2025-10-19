@@ -161,10 +161,24 @@ section {
 }
 
 /* Grid Layouts */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
@@ -438,9 +452,9 @@ footer {
 
 .card img {
     width: 100%;
-    height: 200px;         /* o el alto que prefieras */
-    object-fit: cover;     /* recorta sin deformar */
-    border-radius: 8px 8px 0 0;  /* opcional, igual al card */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
     display: block;
 }
 
@@ -486,8 +500,6 @@ footer {
         padding: 120px 2rem 80px;
     }
 
-    /* header-banner removed; hero uses background image now */
-
     .hero h1 {
         font-size: 2rem;
     }
@@ -508,7 +520,15 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
     .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
         grid-template-columns: 1fr;
     }
 }
