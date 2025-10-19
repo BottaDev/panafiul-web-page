@@ -174,9 +174,18 @@ section {
 
 .grid-4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 3rem;
+    justify-items: center;
+}
+
+.grid-4 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    text-align: center;
 }
 
 .card {
@@ -190,6 +199,11 @@ section {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card:hover h3 {
+  color: #10b981;
+  transition: color 0.3s;
 }
 
 .card-icon {
