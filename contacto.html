@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Pana Fiul S.R.L.</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -44,30 +45,30 @@
                     <form id="contactForm" onsubmit="handleSubmit(event)">
                         <div class="form-group">
                             <label>Nombre y Apellido *</label>
-                            <input type="text" required placeholder="Ej: Juan Pérez">
+                            <input type="text" name="nombre" required placeholder="Ej: Juan Pérez">
                         </div>
                         <div class="form-group">
                             <label>Empresa</label>
-                            <input type="text" placeholder="Nombre de tu empresa (opcional)">
+                            <input type="text" name="empresa" placeholder="Nombre de tu empresa (opcional)">
                         </div>
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" required placeholder="tu@email.com">
+                            <input type="email" name="email" required placeholder="tu@email.com">
                         </div>
                         <div class="form-group">
                             <label>Teléfono *</label>
-                            <input type="tel" required placeholder="+54 11 1234-5678">
+                            <input type="tel" name="telefono" required placeholder="+54 11 1234-5678">
                         </div>
                         <div class="form-group">
                             <label>Tipo de Consulta</label>
-                            <select>
+                            <select name="tipo_consulta">
                                 <option>Cotización</option>
                                 <option>Otro</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Mensaje *</label>
-                            <textarea required placeholder="Contanos en qué podemos ayudarte. Si es una cotización, incluí la mayor cantidad de detalles posible (tipo de producto, medidas, cantidades, aplicación, etc.)"></textarea>
+                            <textarea name="mensaje" required placeholder="Contanos en qué podemos ayudarte..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Consulta</button>
                     </form>
@@ -105,7 +106,7 @@
                         <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">
                             Respondemos consultas de Lunes a Viernes de 10:00 a 16:00hs
                         </p>
-                        <a href="https://wa.me/549119082624" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center;">
+                        <a href="https://wa.me/+5491141576110" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center;">
                             Chatear por WhatsApp
                         </a>
                     </div>
