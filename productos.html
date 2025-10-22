@@ -4,156 +4,737 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos - Pana Fiul S.R.L.</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #10b981;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('Imagenes/Productos/banner.jpg'),
+        linear-gradient(135deg, rgba(51, 65, 85, 0.95) 0%, rgba(71, 85, 105, 0.9) 100%);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 150px 2rem 100px;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 80px 2rem;
+    }
+
+    .bg-gray {
+      background: #f8fafc;
+    }
+
+    .bg-dark {
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      color: white;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #334155;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #64748b;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .product-image {
+      height: 200px;
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image span {
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .product-content {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-category {
+      display: inline-block;
+      background: #dcfce7;
+      color: #10b981;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+
+    .product-card h3 {
+      font-size: 1.5rem;
+      color: #334155;
+      margin-bottom: 0.75rem;
+      transition: color 0.3s;
+    }
+
+    .product-card:hover h3 {
+      color: #10b981;
+    }
+
+    .product-card > .product-content > p {
+      color: #64748b;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .product-features li {
+      color: #64748b;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .product-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #334155;
+      transform: translateY(-2px);
+    }
+
+    /* Section Divider */
+    .section-divider {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .section-divider h2 {
+      font-size: 2.5rem;
+      color: #334155;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    .section-divider h2::before,
+    .section-divider h2::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #10b981);
+    }
+
+    .section-divider h2::before {
+      right: 100%;
+    }
+
+    .section-divider h2::after {
+      left: 100%;
+      background: linear-gradient(90deg, #10b981, transparent);
+    }
+
+    .section-divider p {
+      color: #64748b;
+      font-size: 1.2rem;
+    }
+
+    /* CTA Section */
+    .bg-dark h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .bg-dark p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 3rem 2rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-section {
+      width: 250px;
+    }
+
+    .footer-section h4 {
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section li {
+      margin: 0.5rem 0;
+    }
+
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #10b981;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #334155;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav li {
+        padding: 0.5rem 0;
+      }
+
+      .hero {
+        padding: 120px 2rem 80px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-divider h2::before,
+      .section-divider h2::after {
+        width: 50px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav>
-        <ul id="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="empresa.html">La Empresa</a></li>
-          <li><a href="productos.html" class="active">Productos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <div class="header-content">
+            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <!-- Hero -->
-  <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Inicio/Acoples.jpg');">
+  <div class="hero">
     <div class="container">
       <h1>Nuestros Productos</h1>
       <p>Catálogo completo de soluciones industriales de alta calidad</p>
     </div>
   </div>
 
-  <!-- Secciones de productos -->
+  <!-- Mangueras Section -->
   <section class="bg-gray">
     <div class="container">
+      <div class="section-title">🔧 Mangueras Industriales</div>
+      <div class="section-subtitle">Soluciones de transferencia para todo tipo de fluidos y aplicaciones industriales</div>
 
-      <!-- Mangueras -->
-      <div class="category-section">
-        <h3>🔧 Mangueras</h3>
-        <p style="margin-bottom: 1.5rem; color: #475569;">
-          Descargá nuestros catálogos completos de mangueras industriales, plásticas y compuestas.
-        </p>
-        <div class="product-list">
-          <div class="product-item">
-            <h4>Mangueras Compuestas</h4>
-            <p>Alta resistencia química y mecánica. Ideales para transferencia de combustibles y productos corrosivos.</p>
-            <a href="PDF/Mangueras/MANGUERAS-COMPUESTAS.pdf" class="btn btn-primary" target="_blank">Descargar PDF</a>
+      <div class="product-grid">
+        <!-- Mangueras Compuestas -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>🔗</span>
           </div>
-          <div class="product-item">
-            <h4>Mangueras Industriales</h4>
-            <p>Gran variedad para aplicaciones hidráulicas, neumáticas, de vapor y agua. Fabricadas bajo normas SAE y ISO.</p>
-            <a href="PDF/Mangueras/MANGUERAS-INDUSTRIALES.pdf" class="btn btn-primary" target="_blank">Descargar PDF</a>
+          <div class="product-content">
+            <h3>Mangueras Compuestas</h3>
+            <p>Alta resistencia química y mecánica para las aplicaciones más exigentes de la industria.</p>
+            <ul class="product-features">
+              <li>Resistencia a combustibles y químicos</li>
+              <li>Capas reforzadas con textil y alambre</li>
+              <li>Temperatura de trabajo: -40°C a +100°C</li>
+              <li>Certificaciones SAE e ISO</li>
+            </ul>
+            <a href="PDF/Mangueras/MANGUERAS-COMPUESTAS.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
           </div>
-          <div class="product-item">
-            <h4>Mangueras Plásticas</h4>
-            <p>Livianas, flexibles y resistentes. Fabricadas en PVC, poliuretano y otros materiales según uso.</p>
-            <a href="PDF/Mangueras/MANGUERAS-PLASTICAS.pdf" class="btn btn-primary" target="_blank">Descargar PDF</a>
+        </div>
+
+        <!-- Mangueras Industriales -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>⚙️</span>
+          </div>
+          <div class="product-content">
+            <h3>Mangueras Industriales</h3>
+            <p>Gran variedad para aplicaciones hidráulicas, neumáticas, vapor y agua bajo normas internacionales.</p>
+            <ul class="product-features">
+              <li>Hidráulicas de alta presión</li>
+              <li>Neumáticas y de aspiración</li>
+              <li>Para vapor y agua caliente</li>
+              <li>Normas SAE, DIN e ISO</li>
+            </ul>
+            <a href="PDF/Mangueras/MANGUERAS-INDUSTRIALES.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Mangueras Plásticas -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>🌊</span>
+          </div>
+          <div class="product-content">
+            <h3>Mangueras Plásticas</h3>
+            <p>Livianas, flexibles y resistentes. Fabricadas en PVC, poliuretano y otros polímeros especializados.</p>
+            <ul class="product-features">
+              <li>PVC transparente y reforzado</li>
+              <li>Poliuretano para abrasión</li>
+              <li>Alimentarias y sanitarias</li>
+              <li>Múltiples diámetros en stock</li>
+            </ul>
+            <a href="PDF/Mangueras/MANGUERAS-PLASTICAS.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Acoples -->
-      <div class="category-section">
-        <h3>⚙️ Acoples y Conectores</h3>
-        <p style="margin-bottom: 1.5rem; color: #475569;">
-          Conectores rápidos y adaptadores hidráulicos y neumáticos. Fabricados en acero, aluminio y latón.
-        </p>
-        <div class="product-list">
-          <div class="product-item">
-            <h4>Acoples Rápidos</h4>
-            <p>Para sistemas hidráulicos y neumáticos. Versiones push-in, roscadas y Camlock.</p>
-            <a href="PDF/Acoples/ACOPLES.pdf" class="btn btn-primary" target="_blank">Descargar Catálogo</a>
+  <!-- Acoples Section -->
+  <section>
+    <div class="container">
+      <div class="section-divider">
+        <h2>⚙️ Acoples y Conectores</h2>
+        <p>Conexiones seguras y eficientes para sistemas hidráulicos y neumáticos</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- Acoples Rápidos y Accesorios -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>🔌</span>
           </div>
-          <div class="product-item">
-            <h4>Racores y Adaptadores</h4>
-            <p>Amplia gama de medidas y roscas NPT, BSP y métricas. Stock permanente.</p>
-            <a href="PDF/Acoples/RACORES.pdf" class="btn btn-primary" target="_blank">Descargar Catálogo</a>
+          <div class="product-content">
+            <h3>Acoples Rápidos y Accesorios</h3>
+            <p>Conectores de acción rápida para montaje y desmontaje eficiente en sistemas de fluidos.</p>
+            <ul class="product-features">
+              <li>Tipo Camlock y push-in</li>
+              <li>Acero inoxidable y latón</li>
+              <li>Sellado hermético garantizado</li>
+              <li>Alta y baja presión</li>
+            </ul>
+            <a href="PDF/Acoples/CATALOGO 2018 PANA FIUL SRL - ACOPLES RAPIDOS Y ACCESORIOS.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Acoples Rápidos Neumáticos -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>💨</span>
+          </div>
+          <div class="product-content">
+            <h3>Acoples Rápidos Neumáticos</h3>
+            <p>Conexiones especializadas para sistemas neumáticos industriales de alta eficiencia.</p>
+            <ul class="product-features">
+              <li>Diseño ergonómico</li>
+              <li>Bajo mantenimiento</li>
+              <li>Alta durabilidad</li>
+              <li>Conexión instantánea</li>
+            </ul>
+            <a href="PDF/Acoples/CATALOGO 2018 PANA FIUL SRL- ACOPLES RAPIDOS NEUMATICOS.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Acoples Media Vuelta -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>🔄</span>
+          </div>
+          <div class="product-content">
+            <h3>Acoples Media Vuelta</h3>
+            <p>Sistemas de conexión rápida con rosca de media vuelta para aplicaciones industriales.</p>
+            <ul class="product-features">
+              <li>Conexión/desconexión rápida</li>
+              <li>Sistema de seguridad incorporado</li>
+              <li>Resistente a vibraciones</li>
+              <li>Múltiples configuraciones</li>
+            </ul>
+            <a href="PDF/Acoples/CATALOGO PANA FIUL SRL - ACOPLES MEDIA VUELTA.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Acoples Especiales de Aluminio -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>✨</span>
+          </div>
+          <div class="product-content">
+            <h3>Acoples Especiales de Aluminio</h3>
+            <p>Conectores livianos de aluminio para aplicaciones que requieren bajo peso y alta resistencia.</p>
+            <ul class="product-features">
+              <li>Material liviano y resistente</li>
+              <li>Anticorrosivo</li>
+              <li>Ideal para transporte</li>
+              <li>Diversos tamaños disponibles</li>
+            </ul>
+            <a href="PDF/Acoples/CATALOGO PANA FIUL SRL - ACOPLES RAPIDOS ESPECIALES DE ALUMINIO.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Sellados -->
-      <div class="category-section">
-        <h3>🔩 Sellados y Neumática</h3>
-        <p style="margin-bottom: 1.5rem; color: #475569;">
-          Componentes de sellado y control neumático de alta calidad para sistemas industriales.
-        </p>
-        <div class="product-list">
-          <div class="product-item">
-            <h4>Juntas y O-Rings</h4>
-            <p>Materiales NBR, Viton, EPDM y silicona. Todos los tamaños y normas estándar.</p>
-            <a href="PDF/Sellados/JUNTAS.pdf" class="btn btn-primary" target="_blank">Descargar Catálogo</a>
+  <!-- Sellados Section -->
+  <section class="bg-gray">
+    <div class="container">
+      <div class="section-divider">
+        <h2>🔩 Sellados y Componentes</h2>
+        <p>Elementos de sellado de precisión para garantizar la hermeticidad de tus sistemas</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- Empaquetaduras -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>📦</span>
           </div>
-          <div class="product-item">
-            <h4>Retenes y Sellos</h4>
-            <p>Fabricación estándar y a medida. Resistentes a presión y temperatura.</p>
-            <a href="PDF/Sellados/RETENES.pdf" class="btn btn-primary" target="_blank">Descargar Catálogo</a>
+          <div class="product-content">
+            <h3>Empaquetaduras</h3>
+            <p>Amplia gama de empaquetaduras para válvulas, bombas y equipos rotativos industriales.</p>
+            <ul class="product-features">
+              <li>Grafito, teflón y aramida</li>
+              <li>Alta resistencia térmica</li>
+              <li>Bajo coeficiente de fricción</li>
+              <li>Múltiples aplicaciones</li>
+            </ul>
+            <a href="PDF/Sellados/CATALOGO  PANA FIUL SRL- EMPAQUETADURAS.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Juntas de Sellado -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>⭕</span>
+          </div>
+          <div class="product-content">
+            <h3>Juntas de Sellado</h3>
+            <p>Sellos toroidales y planos en diversos elastómeros para todas las aplicaciones industriales.</p>
+            <ul class="product-features">
+              <li>NBR, Viton, EPDM, Silicona</li>
+              <li>Normas AS568 y métricas</li>
+              <li>Resistencia química y térmica</li>
+              <li>Miles de medidas en stock</li>
+            </ul>
+            <a href="PDF/Sellados/CATALOGO  PANA FIUL SRL- JUNTAS DE SELLADO 2018.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
+          </div>
+        </div>
+
+        <!-- Textiles -->
+        <div class="product-card">
+          <div class="product-image">
+            <span>🧵</span>
+          </div>
+          <div class="product-content">
+            <h3>Textiles Industriales</h3>
+            <p>Materiales textiles técnicos para sellado, aislamiento y refuerzo en aplicaciones industriales.</p>
+            <ul class="product-features">
+              <li>Fibras de alta temperatura</li>
+              <li>Tejidos reforzados</li>
+              <li>Cintas y cordones</li>
+              <li>Resistencia mecánica superior</li>
+            </ul>
+            <a href="PDF/Sellados/CATALOGO PANA FIUL SRL- TEXTILES.pdf" class="btn btn-primary" target="_blank">📄 Descargar Catálogo</a>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- CTA -->
   <section class="bg-dark">
-        <div class="container" style="text-align: center;">
-            <h3>¿Necesitás una Cotización?</h3>
-            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
-                <a href="https://wa.me/549119082624" class="btn btn-secondary">Chatear por WhatsApp</a>
-            </div>
-        </div>
-    </section>
+    <div class="container" style="text-align: center;">
+      <h3>¿Necesitás una Cotización?</h3>
+      <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">Solicitar Cotización</a>
+        <a href="https://wa.me/549119082624" class="btn btn-secondary">Chatear por WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <div>
-      <div class="footer-content">
-        <div class="footer-section" style="width: 400px !important;">
-          <h4>Pana Fiul S.R.L.</h4>
-          <span style="color: #cbd5e1; margin-top: 1rem;">
-            Soluciones industriales de calidad desde 2000.
-            Tu socio confiable en mangueras y accesorios.
-          </span>
-        </div>
+        <div>
+            <div class="footer-content">
+                <div class="footer-section" style="width: 400px !important;">
+                    <h4>Pana Fiul S.R.L</h4>
+                    <span style="color: #cbd5e1; margin-top: 1rem;">
+                        Soluciones industriales de calidad desde 2000. 
+                        Tu socio confiable en mangueras y accesorios.
+                    </span>
+                </div>
 
-        <div class="footer-section">
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="empresa.html">La Empresa</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="empresa.html">La Empresa</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
 
-        <div class="footer-section">
-          <h4>Contacto</h4>
-          <ul>
-            <li>📞 +54 11 6080-9144</li>
-            <li>📧 info@panafiul.com.ar</li>
-            <li>📍 Buenos Aires, Argentina</li>
-            <li>🕐 Lun-Vie: 10:00-16:00</li>
-          </ul>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📞 +54 11 6080-9144</li>
+                        <li>📧 info@panafiul.com.ar</li>
+                        <li>📍 Buenos Aires, Argentina</li>
+                        <li>🕐 Lun-Vie: 10:00-16:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
+            </div>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2025 Pana Fiul S.R.L. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <script>
     function toggleMenu() {
