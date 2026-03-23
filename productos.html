@@ -13,6 +13,14 @@
       margin-top: 3rem;
     }
 
+    .product-grid.product-grid-four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .container.acoples-container {
+      max-width: 1580px;
+    }
+
     .product-card {
       background: white;
       border-radius: 10px;
@@ -150,6 +158,12 @@
       font-size: 1.2rem;
     }
 
+    @media (max-width: 1024px) {
+      .product-grid.product-grid-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 768px) {
       .product-grid {
         grid-template-columns: 1fr;
@@ -253,13 +267,13 @@
 
   <!-- Acoples Section -->
   <section>
-    <div class="container">
+    <div class="container acoples-container">
       <div class="section-divider">
         <h2>Acoples y Conectores</h2>
         <p>Conexiones seguras y eficientes para sistemas hidráulicos y neumáticos</p>
       </div>
 
-      <div class="product-grid">
+      <div class="product-grid product-grid-four">
         <!-- Acoples Rápidos y Accesorios -->
         <div class="product-card">
           <div class="product-image">
