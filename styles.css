@@ -401,6 +401,36 @@ section {
     justify-content: center;
 }
 
+.product-image img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.product-image.product-image-photo {
+    background: #fff;
+    background-image: none;
+    padding: 0.35rem;
+}
+
+.product-image.product-image-photo img {
+    height: 96%;
+    object-fit: contain;
+    width: 96%;
+}
+
+.product-image.product-image-industrial {
+    padding: 0.35rem;
+}
+
+.product-image.product-image-industrial img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+}
+
 .product-content {
     display: flex;
     flex: 1;
