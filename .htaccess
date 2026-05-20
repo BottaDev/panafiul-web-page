@@ -1,0 +1,12 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header set X-Robots-Tag "noindex, nofollow, noarchive"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^wp(/.*)?$ - [R=404,L]
+</IfModule>

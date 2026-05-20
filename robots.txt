@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /wp/
+Disallow: /PDF/
+
+Sitemap: https://panafiul.com.ar/sitemap.xml

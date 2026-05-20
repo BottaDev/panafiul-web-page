@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Pana Fiul S.R.L.</title>
+    <meta name="description" content="Solicitá cotización de mangueras industriales, acoples, sellados, textiles técnicos y válvulas para aplicaciones industriales.">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
@@ -63,13 +64,33 @@
                             <label>Tipo de Consulta</label>
                             <select name="tipo_consulta">
                                 <option>Cotización</option>
+                                <option>Asesoramiento técnico</option>
+                                <option>Consulta por stock</option>
                                 <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Producto o línea de interés</label>
+                            <select name="producto">
+                                <option value="">Seleccionar producto</option>
+                                <option value="mangueras-compuestas">Mangueras compuestas</option>
+                                <option value="mangueras-industriales">Mangueras industriales</option>
+                                <option value="mangueras-plasticas">Mangueras plásticas</option>
+                                <option value="acoples-rapidos">Acoples rápidos a palanca</option>
+                                <option value="acoples-neumaticos">Acoples rápidos neumáticos</option>
+                                <option value="acoples-media-vuelta">Acoples media vuelta</option>
+                                <option value="acoples-especiales-aluminio">Acoples especiales de aluminio</option>
+                                <option value="empaquetaduras-industriales">Empaquetaduras industriales</option>
+                                <option value="juntas-de-sellado">Materiales para juntas de sellado</option>
+                                <option value="textiles-industriales">Textiles industriales</option>
+                                <option value="valvulas-industriales">Válvulas industriales</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Mensaje *</label>
                             <textarea name="mensaje" required placeholder="Contanos en qué podemos ayudarte..."></textarea>
                         </div>
+                        <input type="hidden" name="origen" value="contacto.html">
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Consulta</button>
                     </form>
                     <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
@@ -160,7 +181,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
             </div>
         </div>
