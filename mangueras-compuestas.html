@@ -7,21 +7,93 @@
     <meta name="description" content="Mangueras compuestas para transferencia de combustibles, químicos e hidrocarburos. Compatibilidad, aplicaciones y cotización técnica.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .related-products {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            margin: 1.25rem auto 0;
-            max-width: 520px;
+        .technical-hero {
+            padding: 86px 2rem 58px;
+        }
+
+        .technical-hero h1 {
+            font-size: 2.55rem;
+        }
+
+        .technical-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
+        .detail-section {
+            padding: 3.5rem 2rem;
+        }
+
+        .detail-section .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-intro .landing-intro {
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+            margin-top: 1.4rem;
+        }
+
+        .detail-intro .lead-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .detail-intro .feature-panel {
+            padding: 1.25rem;
+        }
+
+        .detail-intro .feature-panel li {
+            margin: 0.55rem 0;
+        }
+
+        .catalog-section .spec-table-wrapper {
+            margin-top: 1.25rem;
+        }
+
+        .catalog-section .spec-table {
+            min-width: 680px;
+        }
+
+        .catalog-section .spec-table th,
+        .catalog-section .spec-table td {
+            padding: 0.8rem 0.9rem;
         }
 
         .related-section {
-            padding: 3rem 2rem;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.25rem 2rem;
         }
 
-        .related-section .section-title {
-            font-size: 1.6rem;
-            margin-bottom: 0;
+        .related-header {
+            align-items: flex-end;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+        }
+
+        .related-heading {
+            color: #334155;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .related-note {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+            text-align: right;
+        }
+
+        .related-products {
+            display: grid;
+            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            margin: 0;
         }
 
         .related-product {
@@ -29,8 +101,11 @@
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             color: #334155;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            min-height: 64px;
             overflow: hidden;
-            text-align: center;
+            text-align: left;
             text-decoration: none;
             transition: border-color 0.2s ease, transform 0.2s ease;
         }
@@ -44,8 +119,9 @@
             align-items: center;
             background: #f8fafc;
             display: flex;
-            height: 90px;
+            height: 64px;
             justify-content: center;
+            overflow: hidden;
         }
 
         .related-product-image img {
@@ -57,16 +133,47 @@
 
         .related-product-icon {
             color: white;
-            font-size: 2.4rem;
+            font-size: 1.8rem;
         }
 
         .related-product-title {
-            font-size: 0.95rem;
+            align-items: center;
+            display: flex;
+            font-size: 0.92rem;
             font-weight: 700;
-            padding: 0.7rem;
+            line-height: 1.25;
+            padding: 0.65rem 0.85rem;
         }
 
-        @media (max-width: 640px) {
+        .cta-section {
+            padding: 3rem 2rem;
+        }
+
+        @media (max-width: 760px) {
+            .technical-hero {
+                padding: 74px 1.25rem 48px;
+            }
+
+            .technical-hero h1 {
+                font-size: 2rem;
+            }
+
+            .detail-section {
+                padding: 2.75rem 1.25rem;
+            }
+
+            .related-header {
+                align-items: stretch;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            .related-note {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 560px) {
             .related-products {
                 grid-template-columns: 1fr;
             }
@@ -89,22 +196,21 @@
         </div>
     </header>
 
-    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Productos/banner.jpg');">
+    <div class="hero technical-hero" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
         <div class="container">
-            <h1>Mangueras Compuestas</h1>
-            <p>Transferencia flexible para combustibles, químicos, hidrocarburos y fluidos industriales exigentes</p>
+            <h1>Nuestros Productos</h1>
+            <p>Soluciones industriales organizadas por categoría para elegir, comparar y cotizar con precisión</p>
         </div>
     </div>
 
-    <section class="bg-white related-section">
+    <section class="bg-white detail-section detail-intro">
         <div class="container">
             <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / Mangueras compuestas
             </div>
-            <span class="product-pill">Mangueras industriales</span>
             <div class="landing-intro">
                 <div>
-                    <h2 class="section-title" style="text-align:left;">Ficha técnica resumida</h2>
+                    <h2 class="section-title" style="text-align:left;">Mangueras Compuestas</h2>
                     <p class="lead-text">
                         Las mangueras compuestas están orientadas a operaciones de aspiración e impulsión para combustibles, hidrocarburos, químicos, solventes y fluidos industriales. Combinan tubo interno compatible con el producto, capas de refuerzo y espirales metálicas internas o externas según el modelo.
                     </p>
@@ -129,7 +235,7 @@
         </div>
     </section>
 
-    <section class="bg-gray">
+    <section class="bg-gray detail-section catalog-section">
         <div class="container">
             <h2 class="section-title">Líneas del Catálogo</h2>
             <div class="spec-table-wrapper">
@@ -178,9 +284,11 @@
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="related-section">
         <div class="container">
-            <h2 class="section-title">Otras mangueras</h2>
+            <div class="related-header">
+                <h2 class="related-heading">Otros productos</h2>
+            </div>
             <div class="related-products">
                 <a href="mangueras-industriales.html" class="related-product">
                     <div class="related-product-image">
@@ -195,11 +303,67 @@
                     </div>
                     <div class="related-product-title">Mangueras Plásticas</div>
                 </a>
+
+                <a href="acoples-rapidos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔌</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos a Palanca</div>
+                </a>
+
+                <a href="acoples-neumaticos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">💨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos Neumáticos</div>
+                </a>
+
+                <a href="acoples-media-vuelta.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔄</span>
+                    </div>
+                    <div class="related-product-title">Acoples Media Vuelta</div>
+                </a>
+
+                <a href="acoples-especiales-aluminio.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">✨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Especiales de Aluminio</div>
+                </a>
+
+                <a href="empaquetaduras-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">📦</span>
+                    </div>
+                    <div class="related-product-title">Empaquetaduras</div>
+                </a>
+
+                <a href="juntas-de-sellado.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⭕</span>
+                    </div>
+                    <div class="related-product-title">Materiales para Juntas de Sellado</div>
+                </a>
+
+                <a href="textiles-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🧵</span>
+                    </div>
+                    <div class="related-product-title">Telas Industriales para Altas Temperaturas</div>
+                </a>
+
+                <a href="valvulas-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⚙️</span>
+                    </div>
+                    <div class="related-product-title">Válvulas Industriales</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="bg-dark">
+    <section class="bg-dark cta-section">
         <div class="container" style="text-align: center;">
             <h3>¿Necesitás una Cotización?</h3>
             <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
