@@ -4,8 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangueras Plásticas - Pana Fiul S.R.L.</title>
-    <meta name="description" content="Mangueras plásticas de PVC, poliuretano y polímeros técnicos para aire, agua, alimentos, aspiración e impulsión.">
+    <meta name="description" content="Mangueras plásticas de PVC, poliuretano y EVA para aspiración, impulsión, alimentos, hidrocarburos, presión, fumigación y riego. Ficha técnica y catálogo PDF.">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .technical-hero {
+            padding: 86px 2rem 58px;
+        }
+
+        .technical-hero h1 {
+            font-size: 2.55rem;
+        }
+
+        .technical-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
+        .detail-section {
+            padding: 3.5rem 2rem;
+        }
+
+        .detail-section .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-intro .landing-intro {
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+            margin-top: 1.4rem;
+        }
+
+        .detail-intro .lead-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .detail-intro .feature-panel {
+            padding: 1.25rem;
+        }
+
+        .detail-intro .feature-panel li {
+            margin: 0.55rem 0;
+        }
+
+        .catalog-section .spec-table-wrapper {
+            margin-top: 1.25rem;
+        }
+
+        .catalog-section .spec-table {
+            min-width: 760px;
+        }
+
+        .catalog-section .spec-table th,
+        .catalog-section .spec-table td {
+            padding: 0.8rem 0.9rem;
+        }
+
+        .related-section {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.25rem 2rem;
+        }
+
+        .related-header {
+            align-items: flex-end;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+        }
+
+        .related-heading {
+            color: #334155;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .related-products {
+            display: grid;
+            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            margin: 0;
+        }
+
+        .related-product {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #334155;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            min-height: 64px;
+            overflow: hidden;
+            text-align: left;
+            text-decoration: none;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .related-product:hover {
+            border-color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        .related-product-image {
+            align-items: center;
+            background: #f8fafc;
+            display: flex;
+            height: 64px;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .related-product-image img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .related-product-icon {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .related-product-title {
+            align-items: center;
+            display: flex;
+            font-size: 0.92rem;
+            font-weight: 700;
+            line-height: 1.25;
+            padding: 0.65rem 0.85rem;
+        }
+
+        .cta-section {
+            padding: 3rem 2rem;
+        }
+
+        @media (max-width: 760px) {
+            .technical-hero {
+                padding: 74px 1.25rem 48px;
+            }
+
+            .technical-hero h1 {
+                font-size: 2rem;
+            }
+
+            .detail-section {
+                padding: 2.75rem 1.25rem;
+            }
+
+            .related-header {
+                align-items: stretch;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .related-products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,75 +185,97 @@
         </div>
     </header>
 
-    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Productos/banner.jpg');">
+    <div class="hero technical-hero" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
         <div class="container">
-            <h1>Mangueras Plásticas</h1>
-            <p>PVC, poliuretano y polímeros técnicos para aplicaciones livianas, sanitarias y de abrasión</p>
+            <h1>Nuestros Productos</h1>
+            <p>Soluciones industriales organizadas por categoría para elegir, comparar y cotizar con precisión</p>
         </div>
     </div>
 
-    <section class="bg-white">
+    <section class="bg-white detail-section detail-intro">
         <div class="container">
             <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / Mangueras plásticas
             </div>
-            <span class="product-pill">Mangueras industriales</span>
             <div class="landing-intro">
                 <div>
-                    <h2 class="section-title" style="text-align:left;">Mangueras livianas, flexibles y fáciles de instalar</h2>
+                    <h2 class="section-title" style="text-align:left;">Mangueras Plásticas</h2>
                     <p class="lead-text">
-                        Las mangueras plásticas se utilizan en conducción de aire, agua, alimentos, productos livianos, aspiración, impulsión y transporte de partículas. Según la aplicación pueden fabricarse en PVC, poliuretano u otros polímeros técnicos.
+                        La línea de mangueras plásticas reúne modelos de PVC, poliuretano y EVA para aspiración, impulsión, hidrocarburos, cereales, alimentos, uso industrial, presión, fumigación y riego. El catálogo detalla códigos, diámetros, presión de trabajo, radio de curvatura y longitudes por familia.
                     </p>
                     <p class="note">
-                        La elección depende del fluido, flexibilidad requerida, transparencia, abrasión, temperatura y contacto sanitario.
+                        La selección final debe confirmarse según fluido o material transportado, presión, temperatura, flexibilidad, abrasión, transparencia y requisitos sanitarios.
                     </p>
+                    <div class="product-actions" style="margin-top: 1.5rem;">
+                        <a href="PDF/Mangueras/MANGUERAS-PLASTICAS.pdf" class="btn btn-primary" target="_blank" rel="noopener">Descargar PDF</a>
+                    </div>
                 </div>
                 <div class="feature-panel">
-                    <h3>Opciones habituales</h3>
+                    <h3>Datos clave</h3>
                     <ul>
-                        <li>PVC transparente y reforzado</li>
-                        <li>Mangueras espiraladas para aspiración</li>
-                        <li>Poliuretano para abrasión</li>
-                        <li>Versiones alimentarias o sanitarias</li>
-                        <li>Diámetros y largos según requerimiento</li>
+                        <li>Modelos aspirantes-expelentes, de presión y riego</li>
+                        <li>PVC virgen, EVA y poliuretano según aplicación</li>
+                        <li>Rango general de 10°C a +60°C según línea</li>
+                        <li>Poliuretano para materiales abrasivos</li>
+                        <li>Tablas por diámetro, presión, radio y longitud</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray">
+    <section class="bg-gray detail-section catalog-section">
         <div class="container">
-            <h2 class="section-title">Ficha Técnica Orientativa</h2>
+            <h2 class="section-title">Líneas del Catálogo</h2>
             <div class="spec-table-wrapper">
                 <table class="spec-table">
                     <thead>
                         <tr>
-                            <th>Material</th>
-                            <th>Aplicación típica</th>
-                            <th>Ventaja principal</th>
+                            <th>Familia</th>
+                            <th>Códigos</th>
+                            <th>Aplicación orientativa</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>PVC transparente</td>
-                            <td>Aire, agua, líquidos generales y visualización del paso del fluido.</td>
-                            <td>Flexibilidad y control visual.</td>
+                            <td>Aspirante-expelente hidrocarburo</td>
+                            <td>MAE AZUL</td>
+                            <td>Aspiración e impulsión de derivados de petróleo, nafta, gas oil, fuel oil, aceites minerales y barros contaminados con combustibles.</td>
                         </tr>
                         <tr>
-                            <td>PVC reforzado</td>
-                            <td>Aspiración, impulsión y servicios con mayor exigencia mecánica.</td>
-                            <td>Mayor resistencia al aplastamiento.</td>
+                            <td>Aspirante-expelente cereal</td>
+                            <td>MAE NEGRO</td>
+                            <td>Cereales, semillas, agroindustria y usos generales con PVC negro y protección UV.</td>
                         </tr>
                         <tr>
-                            <td>Poliuretano</td>
-                            <td>Abrasivos, polvos, virutas, granos y transporte neumático liviano.</td>
-                            <td>Buena resistencia a desgaste por abrasión.</td>
+                            <td>Aspirante-expelente alimentario</td>
+                            <td>MAE CRISTAL</td>
+                            <td>Alimentos, insumos y derivados líquidos o pastosos en bodegas, alimenticias, farmacéuticas y cervecerías.</td>
                         </tr>
                         <tr>
-                            <td>Sanitaria o alimentaria</td>
-                            <td>Procesos donde se requiere compatibilidad con contacto alimentario.</td>
-                            <td>Selección según norma o requisito del proceso.</td>
+                            <td>Abrasión, polvo y ventilación</td>
+                            <td>MAE RA / MAE PU</td>
+                            <td>Virutas, aserrín, fibras textiles, polvos, granza y materiales abrasivos con opciones en PVC/nitrílico o poliuretano.</td>
+                        </tr>
+                        <tr>
+                            <td>Usos generales</td>
+                            <td>MES / ME CRISTAL / ME AMARILLA / ME NEGRO</td>
+                            <td>Lácteos, laboratorios, construcción, conducción industrial e hidrocarburos traslúcidos.</td>
+                        </tr>
+                        <tr>
+                            <td>Fumigación y pulverización</td>
+                            <td>MF 20 / MF 50 / ME AGRO</td>
+                            <td>Productos agroquímicos, insecticidas, fumigación y equipos de pulverización manuales o motrices.</td>
+                        </tr>
+                        <tr>
+                            <td>Presión multipropósito</td>
+                            <td>ME HR / MEH / MEAL / MEA</td>
+                            <td>Aire, agua, hidrocarburos, alimentos, compresores, talleres, estaciones de servicio y usos bajo presión.</td>
+                        </tr>
+                        <tr>
+                            <td>Riego industrial</td>
+                            <td>MSTD / MERR5 / MERR10</td>
+                            <td>Riego, desagote, bombas centrifugas, sistemas presurizados, floricultura, horticultura, construcción y agro.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -99,53 +283,124 @@
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="related-section">
         <div class="container">
-            <h2 class="section-title">Criterios de Compatibilidad</h2>
-            <div class="compatibility-grid">
-                <div class="compatibility-item">
-                    <h3>Agua y aire</h3>
-                    <p>Aplicaciones frecuentes. Confirmar presión, diámetro y temperatura.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Alimentos</h3>
-                    <p>Requiere indicar producto, limpieza, temperatura y norma solicitada.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Abrasivos</h3>
-                    <p>Poliuretano o construcción reforzada según tamaño de partícula y caudal.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Químicos</h3>
-                    <p>Se debe validar compatibilidad del polímero con concentración y temperatura.</p>
-                </div>
+            <div class="related-header">
+                <h2 class="related-heading">Otros productos</h2>
             </div>
-            <div class="quote-panel">
-                <h2>Solicitar cotización de mangueras plásticas</h2>
-                <p>Compartí fluido, diámetro, largo y condiciones de trabajo para definir el material correcto.</p>
-                <a href="contacto.html?producto=mangueras-plasticas" class="btn btn-primary">Enviar consulta</a>
-                <a href="https://wa.me/5491141576110?text=Hola%2C%20quiero%20cotizar%20mangueras%20pl%C3%A1sticas." class="btn btn-outline">Consultar por WhatsApp</a>
+            <div class="related-products">
+                <a href="mangueras-compuestas.html?v=2" class="related-product">
+                    <div class="related-product-image">
+                        <img src="Imagenes/Productos/Mangueras Compuestas.png" alt="Mangueras Compuestas">
+                    </div>
+                    <div class="related-product-title">Mangueras Compuestas</div>
+                </a>
+
+                <a href="mangueras-industriales.html?v=2" class="related-product">
+                    <div class="related-product-image">
+                        <img src="Imagenes/Productos/Mangueras Industriales.png" alt="Mangueras Industriales">
+                    </div>
+                    <div class="related-product-title">Mangueras Industriales</div>
+                </a>
+
+                <a href="acoples-rapidos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔌</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos a Palanca</div>
+                </a>
+
+                <a href="acoples-neumaticos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">💨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos Neumáticos</div>
+                </a>
+
+                <a href="acoples-media-vuelta.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔄</span>
+                    </div>
+                    <div class="related-product-title">Acoples Media Vuelta</div>
+                </a>
+
+                <a href="acoples-especiales-aluminio.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">✨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Especiales de Aluminio</div>
+                </a>
+
+                <a href="empaquetaduras-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">📦</span>
+                    </div>
+                    <div class="related-product-title">Empaquetaduras</div>
+                </a>
+
+                <a href="juntas-de-sellado.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⭕</span>
+                    </div>
+                    <div class="related-product-title">Materiales para Juntas de Sellado</div>
+                </a>
+
+                <a href="textiles-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🧵</span>
+                    </div>
+                    <div class="related-product-title">Telas Industriales para Altas Temperaturas</div>
+                </a>
+
+                <a href="valvulas-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⚙️</span>
+                    </div>
+                    <div class="related-product-title">Válvulas Industriales</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <div class="category-nav">
-        <div class="container">
-            <a href="mangueras-compuestas.html">Mangueras compuestas</a>
-            <a href="mangueras-industriales.html">Mangueras industriales</a>
-            <a href="acoples-rapidos.html">Acoples rápidos</a>
-            <a href="productos.html">Todos los productos</a>
+    <section class="bg-dark cta-section">
+        <div class="container" style="text-align: center;">
+            <h3>¿Necesitás una Cotización?</h3>
+            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div>
             <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;"><h4>Pana Fiul S.R.L.</h4><span style="color: #cbd5e1;">Soluciones industriales para conducción, control y sellado de fluidos.</span></div>
-                <div class="footer-section"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="empresa.html">La Empresa</a></li><li><a href="productos.html">Productos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-                <div class="footer-section"><h4>Contacto</h4><ul><li>+54 11 6080-9144</li><li>info@panafiul.com.ar</li><li>Buenos Aires, Argentina</li><li>Lun-Vie: 10:00-16:00</li></ul></div>
+                <div class="footer-section" style="width: 400px !important;">
+                    <h4>Pana Fiul S.R.L.</h4>
+                    <span style="color: #cbd5e1; margin-top: 1rem;">Soluciones industriales para conducción, control y sellado de fluidos.</span>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="empresa.html">La Empresa</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+54 11 6080-9144</li>
+                        <li>info@panafiul.com.ar</li>
+                        <li>Buenos Aires, Argentina</li>
+                        <li>Lun-Vie: 10:00-16:00</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 

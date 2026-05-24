@@ -4,8 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangueras Industriales - Pana Fiul S.R.L.</title>
-    <meta name="description" content="Mangueras industriales para aire, agua, vapor, hidráulica, abrasivos y servicios generales. Ficha técnica y cotización por aplicación.">
+    <meta name="description" content="Mangueras industriales para aire, agua, vapor, hidrocarburos, químicos, abrasivos, sanitarias, soldadura y polvo. Ficha técnica y catálogo PDF.">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .technical-hero {
+            padding: 86px 2rem 58px;
+        }
+
+        .technical-hero h1 {
+            font-size: 2.55rem;
+        }
+
+        .technical-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
+        .detail-section {
+            padding: 3.5rem 2rem;
+        }
+
+        .detail-section .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-intro .landing-intro {
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+            margin-top: 1.4rem;
+        }
+
+        .detail-intro .lead-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .detail-intro .feature-panel {
+            padding: 1.25rem;
+        }
+
+        .detail-intro .feature-panel li {
+            margin: 0.55rem 0;
+        }
+
+        .catalog-section .spec-table-wrapper {
+            margin-top: 1.25rem;
+        }
+
+        .catalog-section .spec-table {
+            min-width: 760px;
+        }
+
+        .catalog-section .spec-table th,
+        .catalog-section .spec-table td {
+            padding: 0.8rem 0.9rem;
+        }
+
+        .related-section {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2.25rem 2rem;
+        }
+
+        .related-header {
+            align-items: flex-end;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+        }
+
+        .related-heading {
+            color: #334155;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .related-products {
+            display: grid;
+            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            margin: 0;
+        }
+
+        .related-product {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #334155;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            min-height: 64px;
+            overflow: hidden;
+            text-align: left;
+            text-decoration: none;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .related-product:hover {
+            border-color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        .related-product-image {
+            align-items: center;
+            background: #f8fafc;
+            display: flex;
+            height: 64px;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .related-product-image img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .related-product-icon {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .related-product-title {
+            align-items: center;
+            display: flex;
+            font-size: 0.92rem;
+            font-weight: 700;
+            line-height: 1.25;
+            padding: 0.65rem 0.85rem;
+        }
+
+        .cta-section {
+            padding: 3rem 2rem;
+        }
+
+        @media (max-width: 760px) {
+            .technical-hero {
+                padding: 74px 1.25rem 48px;
+            }
+
+            .technical-hero h1 {
+                font-size: 2rem;
+            }
+
+            .detail-section {
+                padding: 2.75rem 1.25rem;
+            }
+
+            .related-header {
+                align-items: stretch;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .related-products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,80 +185,97 @@
         </div>
     </header>
 
-    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Productos/banner.jpg');">
+    <div class="hero technical-hero" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
         <div class="container">
-            <h1>Mangueras Industriales</h1>
-            <p>Mangueras para aire, agua, vapor, abrasivos, hidráulica y servicios generales de planta</p>
+            <h1>Nuestros Productos</h1>
+            <p>Soluciones industriales organizadas por categoría para elegir, comparar y cotizar con precisión</p>
         </div>
     </div>
 
-    <section class="bg-white">
+    <section class="bg-white detail-section detail-intro">
         <div class="container">
             <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / Mangueras industriales
             </div>
-            <span class="product-pill">Mangueras industriales</span>
             <div class="landing-intro">
                 <div>
-                    <h2 class="section-title" style="text-align:left;">Selección por servicio industrial</h2>
+                    <h2 class="section-title" style="text-align:left;">Mangueras Industriales</h2>
                     <p class="lead-text">
-                        Esta línea reúne mangueras para operaciones de planta, mantenimiento, conducción de agua, aire comprimido, vapor, productos abrasivos y circuitos hidráulicos. La página permite segmentar campañas por necesidad concreta y llevar al usuario a una ficha consultable desde móvil.
+                        La línea de mangueras industriales reúne alternativas expelentes y aspirantes-expelentes para aire, agua, líquidos no corrosivos, productos sanitarios, abrasivos, vapor, hidrocarburos, químicos, soldadura, polvo y gases. El catálogo detalla códigos, presiones de trabajo, diámetros y condiciones por familia.
                     </p>
                     <p class="note">
-                        Para seleccionar correctamente se debe informar fluido, presión, temperatura, radio de curvatura, ambiente de trabajo y terminales.
+                        La selección final debe confirmarse según fluido, presión, temperatura, diámetro, tipo de servicio y terminales requeridos.
                     </p>
+                    <div class="product-actions" style="margin-top: 1.5rem;">
+                        <a href="PDF/Mangueras/MANGUERAS-INDUSTRIALES.pdf" class="btn btn-primary" target="_blank" rel="noopener">Descargar PDF</a>
+                    </div>
                 </div>
                 <div class="feature-panel">
-                    <h3>Aplicaciones frecuentes</h3>
+                    <h3>Datos clave</h3>
                     <ul>
-                        <li>Aire comprimido y herramientas neumáticas</li>
-                        <li>Agua, riego, aspiración e impulsión</li>
-                        <li>Vapor y agua caliente</li>
-                        <li>Abrasivos, granos y materiales secos</li>
-                        <li>Sistemas hidráulicos de maquinaria</li>
+                        <li>Modelos expelentes y aspirantes-expelentes</li>
+                        <li>Aplicaciones para agua, aire, vapor, químicos e hidrocarburos</li>
+                        <li>Temperatura general hasta 80°C según línea</li>
+                        <li>Vapor con versiones hasta 150°C, 183°C y 208°C</li>
+                        <li>Tablas por diámetro, presión y código</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray">
+    <section class="bg-gray detail-section catalog-section">
         <div class="container">
-            <h2 class="section-title">Ficha Técnica Orientativa</h2>
+            <h2 class="section-title">Líneas del Catálogo</h2>
             <div class="spec-table-wrapper">
                 <table class="spec-table">
                     <thead>
                         <tr>
                             <th>Familia</th>
-                            <th>Uso típico</th>
-                            <th>Dato clave para cotizar</th>
+                            <th>Códigos</th>
+                            <th>Aplicación orientativa</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Aire y neumática</td>
-                            <td>Compresores, líneas de aire, herramientas y mantenimiento.</td>
-                            <td>Presión de trabajo, diámetro, largo y tipo de conexión.</td>
+                            <td>Aire, agua y líquidos no corrosivos</td>
+                            <td>MEA / MAE</td>
+                            <td>Servicios industriales generales, agua, aire y líquidos no corrosivos en versiones expelentes o aspirantes-expelentes.</td>
                         </tr>
                         <tr>
-                            <td>Agua y aspiración</td>
-                            <td>Impulsión, succión, drenaje, riego y servicios generales.</td>
-                            <td>Necesidad de espiral, vacío, caudal y ambiente exterior.</td>
-                        </tr>
-                        <tr>
-                            <td>Vapor y temperatura</td>
-                            <td>Limpieza, procesos térmicos y conducción de agua caliente.</td>
-                            <td>Temperatura, presión, continuidad de uso y seguridad del operador.</td>
+                            <td>Sanitarias y limpieza</td>
+                            <td>MES / MAES</td>
+                            <td>Industria alimenticia, cosméticos, alcoholes, vinos, agua, leche, grasas, cervezas y limpieza con agua caliente.</td>
                         </tr>
                         <tr>
                             <td>Abrasivos</td>
-                            <td>Transporte de granos, polvos, arena, cemento o material particulado.</td>
-                            <td>Nivel de abrasión, radio de curvatura y descarga estática.</td>
+                            <td>MSB</td>
+                            <td>Arenado, granallado, cemento en polvo o elaborado, cereales y abrasivos no corrosivos.</td>
                         </tr>
                         <tr>
-                            <td>Hidráulica</td>
-                            <td>Maquinaria, equipos móviles y circuitos de presión.</td>
-                            <td>Presión, impulsos, norma requerida y terminal prensado.</td>
+                            <td>Vapor</td>
+                            <td>MSH</td>
+                            <td>Conducción de vapor saturado, procesamiento, limpieza industrial y versiones con refuerzo textil o trenzas metálicas.</td>
+                        </tr>
+                        <tr>
+                            <td>Hidrocarburos</td>
+                            <td>MEH / MAE HS</td>
+                            <td>Naftas, gas oil, fuel oil, kerosene y conducción de hidrocarburos con contenido aromático máximo indicado por catálogo.</td>
+                        </tr>
+                        <tr>
+                            <td>Productos químicos</td>
+                            <td>MEPQ / MAEPQ</td>
+                            <td>Plantas químicas y petroquímicas, impulsión de ácidos y productos químicos en versiones expelentes o aspirantes-expelentes.</td>
+                        </tr>
+                        <tr>
+                            <td>Soldadura</td>
+                            <td>MEW</td>
+                            <td>Impulsión de oxígeno o acetileno para metalúrgicas, mantenimiento, industria naval, automotriz y equipos de oxicorte.</td>
+                        </tr>
+                        <tr>
+                            <td>Polvo, gases y virutas</td>
+                            <td>MAEDL / MAD</td>
+                            <td>Aspiración o aspiración-impulsión de gases, polvo, virutas y polvos poco abrasivos.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -104,53 +283,124 @@
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="related-section">
         <div class="container">
-            <h2 class="section-title">Compatibilidad y Selección</h2>
-            <div class="compatibility-grid">
-                <div class="compatibility-item">
-                    <h3>Fluidos simples</h3>
-                    <p>Agua, aire y aceites requieren validar presión, temperatura y exposición exterior.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Temperatura</h3>
-                    <p>Vapor y agua caliente necesitan manguera específica y margen de seguridad operativo.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Abrasión</h3>
-                    <p>Material seco o particulado exige tubo interno resistente y definición de caudal.</p>
-                </div>
-                <div class="compatibility-item">
-                    <h3>Terminales</h3>
-                    <p>Se pueden combinar con acoples rápidos, roscas, bridas, espigas o terminales hidráulicos.</p>
-                </div>
+            <div class="related-header">
+                <h2 class="related-heading">Otros productos</h2>
             </div>
-            <div class="quote-panel">
-                <h2>Solicitar cotización de mangueras industriales</h2>
-                <p>Indicá el servicio de la manguera y las condiciones de trabajo para recibir una alternativa adecuada.</p>
-                <a href="contacto.html?producto=mangueras-industriales" class="btn btn-primary">Enviar consulta</a>
-                <a href="https://wa.me/5491141576110?text=Hola%2C%20quiero%20cotizar%20mangueras%20industriales." class="btn btn-outline">Consultar por WhatsApp</a>
+            <div class="related-products">
+                <a href="mangueras-compuestas.html?v=2" class="related-product">
+                    <div class="related-product-image">
+                        <img src="Imagenes/Productos/Mangueras Compuestas.png" alt="Mangueras Compuestas">
+                    </div>
+                    <div class="related-product-title">Mangueras Compuestas</div>
+                </a>
+
+                <a href="mangueras-plasticas.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🌊</span>
+                    </div>
+                    <div class="related-product-title">Mangueras Plásticas</div>
+                </a>
+
+                <a href="acoples-rapidos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔌</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos a Palanca</div>
+                </a>
+
+                <a href="acoples-neumaticos.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">💨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Rápidos Neumáticos</div>
+                </a>
+
+                <a href="acoples-media-vuelta.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🔄</span>
+                    </div>
+                    <div class="related-product-title">Acoples Media Vuelta</div>
+                </a>
+
+                <a href="acoples-especiales-aluminio.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">✨</span>
+                    </div>
+                    <div class="related-product-title">Acoples Especiales de Aluminio</div>
+                </a>
+
+                <a href="empaquetaduras-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">📦</span>
+                    </div>
+                    <div class="related-product-title">Empaquetaduras</div>
+                </a>
+
+                <a href="juntas-de-sellado.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⭕</span>
+                    </div>
+                    <div class="related-product-title">Materiales para Juntas de Sellado</div>
+                </a>
+
+                <a href="textiles-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🧵</span>
+                    </div>
+                    <div class="related-product-title">Telas Industriales para Altas Temperaturas</div>
+                </a>
+
+                <a href="valvulas-industriales.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">⚙️</span>
+                    </div>
+                    <div class="related-product-title">Válvulas Industriales</div>
+                </a>
             </div>
         </div>
     </section>
 
-    <div class="category-nav">
-        <div class="container">
-            <a href="mangueras-compuestas.html">Mangueras compuestas</a>
-            <a href="mangueras-plasticas.html">Mangueras plásticas</a>
-            <a href="valvulas-industriales.html">Válvulas</a>
-            <a href="productos.html">Todos los productos</a>
+    <section class="bg-dark cta-section">
+        <div class="container" style="text-align: center;">
+            <h3>¿Necesitás una Cotización?</h3>
+            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div>
             <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;"><h4>Pana Fiul S.R.L.</h4><span style="color: #cbd5e1;">Soluciones industriales para conducción, control y sellado de fluidos.</span></div>
-                <div class="footer-section"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="empresa.html">La Empresa</a></li><li><a href="productos.html">Productos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-                <div class="footer-section"><h4>Contacto</h4><ul><li>+54 11 6080-9144</li><li>info@panafiul.com.ar</li><li>Buenos Aires, Argentina</li><li>Lun-Vie: 10:00-16:00</li></ul></div>
+                <div class="footer-section" style="width: 400px !important;">
+                    <h4>Pana Fiul S.R.L.</h4>
+                    <span style="color: #cbd5e1; margin-top: 1rem;">Soluciones industriales para conducción, control y sellado de fluidos.</span>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="empresa.html">La Empresa</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+54 11 6080-9144</li>
+                        <li>info@panafiul.com.ar</li>
+                        <li>Buenos Aires, Argentina</li>
+                        <li>Lun-Vie: 10:00-16:00</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
