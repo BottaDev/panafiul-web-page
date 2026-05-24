@@ -6,6 +6,72 @@
     <title>Mangueras Compuestas - Pana Fiul S.R.L.</title>
     <meta name="description" content="Mangueras compuestas para transferencia de combustibles, químicos e hidrocarburos. Compatibilidad, aplicaciones y cotización técnica.">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .related-products {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin: 1.25rem auto 0;
+            max-width: 520px;
+        }
+
+        .related-section {
+            padding: 3rem 2rem;
+        }
+
+        .related-section .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+
+        .related-product {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #334155;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .related-product:hover {
+            border-color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        .related-product-image {
+            align-items: center;
+            background: #f8fafc;
+            display: flex;
+            height: 90px;
+            justify-content: center;
+        }
+
+        .related-product-image img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .related-product-icon {
+            color: white;
+            font-size: 2.4rem;
+        }
+
+        .related-product-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.7rem;
+        }
+
+        @media (max-width: 640px) {
+            .related-products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,7 +96,7 @@
         </div>
     </div>
 
-    <section class="bg-white">
+    <section class="bg-white related-section">
         <div class="container">
             <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / Mangueras compuestas
@@ -108,6 +174,27 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Otras mangueras</h2>
+            <div class="related-products">
+                <a href="mangueras-industriales.html" class="related-product">
+                    <div class="related-product-image">
+                        <img src="Imagenes/Productos/Mangueras Industriales.png" alt="Mangueras Industriales">
+                    </div>
+                    <div class="related-product-title">Mangueras Industriales</div>
+                </a>
+
+                <a href="mangueras-plasticas.html" class="related-product">
+                    <div class="related-product-image product-image">
+                        <span class="related-product-icon">🌊</span>
+                    </div>
+                    <div class="related-product-title">Mangueras Plásticas</div>
+                </a>
             </div>
         </div>
     </section>
