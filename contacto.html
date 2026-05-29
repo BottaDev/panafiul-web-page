@@ -3,187 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Pana Fiul S.R.L.</title>
-    <meta name="description" content="Solicitá cotización de mangueras industriales, acoples, sellados, textiles técnicos y válvulas para aplicaciones industriales.">
+    <title>Contacto — Pana Fiul S.R.L.</title>
+    <meta name="description" content="Solicitá cotización o asesoramiento técnico de mangueras, acoples, sellados, textiles técnicos y válvulas. Teléfono, email y WhatsApp directos.">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
-<body>
-    <!-- Header -->
+<body data-screen-label="Contacto">
+
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul id="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="empresa.html">La Empresa</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Contacto/banner.jpg');">
+    <!-- Hero -->
+    <section class="hero hero-page" style="--hero-banner: url('Imagenes/Contacto/banner.jpg');">
         <div class="container">
-            <h1>Contacto</h1>
-            <p>Estamos para ayudarte con tus proyectos industriales</p>
+            <span class="kicker on-dark">Hablemos</span>
+            <h1>Solicitá tu cotización o asesoramiento</h1>
+            <p>Respondemos consultas técnicas y comerciales de lunes a viernes de 10 a 16 h. Contanos tu aplicación y te ayudamos a resolverla.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Formulario y Contacto -->
+    <!-- Formulario + contacto -->
     <section class="bg-gray">
         <div class="container">
             <div class="contact-container">
                 <!-- Formulario -->
                 <div class="contact-form">
-                    <h2 style="color: #1e3a8a; margin-bottom: 1.5rem;">Envíanos tu Consulta</h2>
-                    <p style="color: #64748b; margin-bottom: 2rem;">
-                        Completá el formulario y te responderemos a la brevedad. También podés contactarnos directamente por teléfono o WhatsApp.
-                    </p>
+                    <span class="kicker">Formulario de consulta</span>
+                    <h2>Enviá tu consulta</h2>
+                    <p class="form-intro">Completá el formulario y te responderemos a la brevedad. Cuanto más detalle nos des sobre fluido, presión, temperatura y diámetro, más precisa será la cotización.</p>
                     <form id="contactForm" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label>Nombre y Apellido *</label>
-                            <input type="text" name="nombre" required placeholder="Ej: Juan Pérez">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nombre y apellido <span class="req">*</span></label>
+                                <input type="text" name="nombre" required placeholder="Ej: Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label>Empresa</label>
+                                <input type="text" name="empresa" placeholder="Opcional">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email <span class="req">*</span></label>
+                                <input type="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono <span class="req">*</span></label>
+                                <input type="tel" name="telefono" required placeholder="+54 11 1234-5678">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Tipo de consulta</label>
+                                <select name="tipo_consulta">
+                                    <option>Cotización</option>
+                                    <option>Asesoramiento técnico</option>
+                                    <option>Consulta por stock</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Producto de interés</label>
+                                <select name="producto">
+                                    <option value="">Seleccionar producto</option>
+                                    <option value="mangueras-compuestas">Mangueras compuestas</option>
+                                    <option value="mangueras-industriales">Mangueras industriales</option>
+                                    <option value="mangueras-plasticas">Mangueras plásticas</option>
+                                    <option value="acoples-rapidos">Acoples rápidos a palanca</option>
+                                    <option value="acoples-neumaticos">Acoples rápidos neumáticos</option>
+                                    <option value="acoples-media-vuelta">Acoples media vuelta</option>
+                                    <option value="acoples-especiales-aluminio">Acoples especiales de aluminio</option>
+                                    <option value="empaquetaduras-industriales">Empaquetaduras industriales</option>
+                                    <option value="juntas-de-sellado">Materiales para juntas de sellado</option>
+                                    <option value="textiles-industriales">Textiles industriales</option>
+                                    <option value="valvulas-industriales">Válvulas industriales</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label>Empresa</label>
-                            <input type="text" name="empresa" placeholder="Nombre de tu empresa (opcional)">
-                        </div>
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label>Teléfono *</label>
-                            <input type="tel" name="telefono" required placeholder="+54 11 1234-5678">
-                        </div>
-                        <div class="form-group">
-                            <label>Tipo de Consulta</label>
-                            <select name="tipo_consulta">
-                                <option>Cotización</option>
-                                <option>Asesoramiento técnico</option>
-                                <option>Consulta por stock</option>
-                                <option>Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Producto o línea de interés</label>
-                            <select name="producto">
-                                <option value="">Seleccionar producto</option>
-                                <option value="mangueras-compuestas">Mangueras compuestas</option>
-                                <option value="mangueras-industriales">Mangueras industriales</option>
-                                <option value="mangueras-plasticas">Mangueras plásticas</option>
-                                <option value="acoples-rapidos">Acoples rápidos a palanca</option>
-                                <option value="acoples-neumaticos">Acoples rápidos neumáticos</option>
-                                <option value="acoples-media-vuelta">Acoples media vuelta</option>
-                                <option value="acoples-especiales-aluminio">Acoples especiales de aluminio</option>
-                                <option value="empaquetaduras-industriales">Empaquetaduras industriales</option>
-                                <option value="juntas-de-sellado">Materiales para juntas de sellado</option>
-                                <option value="textiles-industriales">Textiles industriales</option>
-                                <option value="valvulas-industriales">Válvulas industriales</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Mensaje *</label>
-                            <textarea name="mensaje" required placeholder="Contanos en qué podemos ayudarte..."></textarea>
+                            <label>Mensaje <span class="req">*</span></label>
+                            <textarea name="mensaje" required placeholder="Contanos en qué podemos ayudarte. Indicá fluido, presión, temperatura, diámetro y cantidad aproximada."></textarea>
                         </div>
                         <input type="hidden" name="origen" value="contacto.html">
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Consulta</button>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar consulta <i data-ic="arrow"></i></button>
                     </form>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
-                        * Campos obligatorios
-                    </p>
+                    <p class="form-note">Los campos marcados con <span style="color:var(--green)">*</span> son obligatorios.</p>
                 </div>
 
-                <!-- Información de Contacto -->
-                <div class="contact-info-box">
-                    <h2 style="color: #1e3a8a; margin-bottom: 1.5rem;">Información de Contacto</h2>
-                    
-                    <div class="info-item">
-                        <h4><span class="info-icon">📞</span> Teléfono</h4>
-                        <p><strong>Ventas:</strong> +54 11 6080-9144</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4><span class="info-icon">📧</span> Emails</h4>
-                        <p><strong>Ventas:</strong> ventas@panafiul.com.ar</p>
-                        <p><strong>Información:</strong> info@panafiul.com.ar</p>
-                        <p><strong>General:</strong> panafiulsrl@yahoo.com.ar</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4><span class="info-icon">🕐</span> Horarios de Atención</h4>
-                        <p><strong>Lunes a Viernes:</strong></p>
-                        <p>10:00 - 16:00</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h4><span class="info-icon">💬</span> WhatsApp</h4>
+                <!-- Aside de contacto -->
+                <aside class="contact-aside">
+                    <div class="contact-card is-whatsapp">
+                        <h4><span class="ci"><i data-ic="whatsapp"></i></span> WhatsApp directo</h4>
                         <p><strong>+54 9 11 6908-2624</strong></p>
                         <p><strong>+54 9 11 4157-6110</strong></p>
-                        <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">
-                            Respondemos consultas de Lunes a Viernes de 10:00 a 16:00hs
-                        </p>
-                        <a href="https://wa.me/+5491141576110" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center;">
-                            Chatear por WhatsApp
-                        </a>
+                        <p style="margin: .6rem 0 1.1rem; color:#9aa6ae; font-size:.9rem;">Respondemos de lunes a viernes de 10 a 16 h.</p>
+                        <a href="https://wa.me/5491141576110" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block btn-sm"><i data-ic="whatsapp"></i> Chatear ahora</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="bg-dark">
-        <div class="container" style="text-align: center;">
-            <h3>¿Necesitás una Cotización?</h3>
-            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+                    <div class="contact-card">
+                        <h4><span class="ci"><i data-ic="phone"></i></span> Teléfono</h4>
+                        <p><strong>Ventas:</strong> <a class="line-link" href="tel:+541160809144">+54 11 6080-9144</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4><span class="ci"><i data-ic="mail"></i></span> Emails</h4>
+                        <p><strong>Ventas:</strong> <a class="line-link" href="mailto:ventas@panafiul.com.ar">ventas@panafiul.com.ar</a></p>
+                        <p><strong>Información:</strong> <a class="line-link" href="mailto:info@panafiul.com.ar">info@panafiul.com.ar</a></p>
+                        <p><strong>General:</strong> <a class="line-link" href="mailto:panafiulsrl@yahoo.com.ar">panafiulsrl@yahoo.com.ar</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4><span class="ci"><i data-ic="clock"></i></span> Horarios</h4>
+                        <p><strong>Lunes a viernes</strong></p>
+                        <p>10:00 a 16:00 h</p>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div>
-            <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;">
-                    <h4>Pana Fiul S.R.L.</h4>
-                    <span style="color: #cbd5e1; margin-top: 1rem;">
-                        Soluciones industriales de calidad desde 2000. 
-                        Tu socio confiable en mangueras y accesorios.
-                    </span>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="empresa.html">La Empresa</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📞 +54 11 6080-9144</li>
-                        <li>📧 info@panafiul.com.ar</li>
-                        <li>📍 Buenos Aires, Argentina</li>
-                        <li>🕐 Lun-Vie: 10:00-16:00</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
     </footer>
 

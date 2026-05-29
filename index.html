@@ -3,168 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pana Fiul S.R.L. - Soluciones Industriales en Mangueras y Accesorios</title>
-    <meta name="description" content="Proveedor industrial de mangueras, acoples, válvulas, sellados y accesorios para conducción, control y sellado de fluidos en Argentina.">
+    <title>Pana Fiul S.R.L. — Soluciones Industriales en Mangueras, Acoples y Sellado</title>
+    <meta name="description" content="Proveedor industrial argentino de mangueras, acoples, válvulas, sellados y textiles técnicos para conducción, control y sellado de fluidos. Asesoramiento técnico y cotización ágil.">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-screen-label="Home">
+
+    <!-- Top utility bar -->
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul id="menu">
                     <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="empresa.html">La Empresa</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero" style="--hero-banner: url('Imagenes/Inicio/banner.jpg');">
         <div class="container">
-            <h1>Soluciones Integrales para la Industria Argentina</h1>
-            <p style="font-size: 1.4rem; max-width: 800px; margin: 1.5rem auto;">
-                Mangueras, acoples y accesorios de alta calidad para conducción, control y sellado de fluidos
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem;">
-                <a href="productos.html" class="btn btn-primary">Ver Productos</a>
-                <a href="contacto.html" class="btn btn-secondary">Solicitar Cotización</a>
+            <span class="kicker on-dark">Proveedor industrial · Argentina</span>
+            <h1>Soluciones integrales para la <em>conducción, control y sellado</em> de fluidos</h1>
+            <p>Mangueras, acoples, válvulas, sellados y textiles técnicos de alto rendimiento. Un solo proveedor para abastecer, asesorar y resolver cada aplicación de tu industria.</p>
+            <div class="hero-actions">
+                <a href="productos.html" class="btn btn-primary">Ver productos <i data-ic="arrow"></i></a>
+                <a href="contacto.html" class="btn btn-secondary on-dark">Solicitar cotización</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="num">20<span>+</span></div><div class="lbl">Años en la industria</div></div>
+                <div class="hero-stat"><div class="num">11</div><div class="lbl">Líneas de producto</div></div>
+                <div class="hero-stat"><div class="num">9</div><div class="lbl">Sectores atendidos</div></div>
+                <div class="hero-stat"><div class="num">1</div><div class="lbl">Proveedor integral</div></div>
             </div>
         </div>
     </section>
 
+    <!-- Diferenciales -->
     <section class="bg-white">
-  <div class="container">
-    <h2 class="section-title">¿Por Qué Elegir Pana Fiul?</h2>
-    <p class="section-subtitle">Más que un proveedor: un aliado industrial confiable</p>
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Por qué Pana Fiul</span>
+                <h2 class="section-title">Más que un proveedor: un aliado técnico</h2>
+                <p class="section-subtitle">Centralizamos tus compras industriales con criterio técnico, stock disponible y respuesta ágil para que produzcas sin interrupciones.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature reveal">
+                    <span class="feature-num">01</span>
+                    <div class="icon-box"><i data-ic="support"></i></div>
+                    <h3>Asesoramiento técnico</h3>
+                    <p>Te ayudamos a seleccionar el componente correcto según fluido, presión, temperatura y servicio. Soporte real, no un catálogo.</p>
+                </div>
+                <div class="feature reveal">
+                    <span class="feature-num">02</span>
+                    <div class="icon-box"><i data-ic="layers"></i></div>
+                    <h3>Variedad de productos</h3>
+                    <p>Mangueras, acoples, válvulas, sellados y textiles técnicos en un mismo proveedor, con compatibilidad garantizada entre líneas.</p>
+                </div>
+                <div class="feature reveal">
+                    <span class="feature-num">03</span>
+                    <div class="icon-box"><i data-ic="bolt"></i></div>
+                    <h3>Respuesta rápida</h3>
+                    <p>Cotizaciones y disponibilidad de stock con tiempos ágiles para que el mantenimiento y la producción no se detengan.</p>
+                </div>
+                <div class="feature reveal">
+                    <span class="feature-num">04</span>
+                    <div class="icon-box"><i data-ic="sliders"></i></div>
+                    <h3>Soluciones a medida</h3>
+                    <p>Armados especiales, cortes según plano y configuraciones a pedido adecuadas a las normas y usos de cada industria.</p>
+                </div>
+                <div class="feature reveal">
+                    <span class="feature-num">05</span>
+                    <div class="icon-box"><i data-ic="truck"></i></div>
+                    <h3>Abastecimiento integral</h3>
+                    <p>Reducí proveedores, fletes y tiempos administrativos concentrando varios rubros en una sola compra coordinada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="grid-4">
-      <div class="card">
-        <h3>🔧 Soluciones Completas</h3>
-        <p>Centralizá todas tus compras de mangueras, acoples y accesorios industriales en un solo proveedor confiable.</p>
-      </div>
-
-      <div class="card">
-        <h3>👷‍♂️ Asistencia Técnica</h3>
-        <p>Recibí asesoramiento personalizado para seleccionar los componentes ideales según tu aplicación y exigencia.</p>
-      </div>
-
-      <div class="card">
-        <h3>💰 Eficiencia en Costos y Logística</h3>
-        <p>Reducí tiempos, fletes y gastos administrativos mediante un suministro ágil y coordinado.</p>
-      </div>
-
-      <div class="card">
-        <h3>🏭 Confianza con Historia</h3>
-        <p>Más de 20 años abasteciendo a las principales industrias argentinas con productos de alto rendimiento.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+    <!-- Líneas principales -->
     <section class="bg-gray">
         <div class="container">
-            <h2 class="section-title">Nuestros Productos Principales</h2>
-            <p class="section-subtitle">Soluciones para cada necesidad industrial</p>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <img src="Imagenes/Inicio/Mangueras.png" alt="Mangueras industriales">
-                    <h3>Mangueras Industriales</h3>
-                    <p>Amplia gama de mangueras para aplicaciones hidráulicas, neumáticas, químicas y alimenticias.</p>
-                    <ul>
-                        <li>Mangueras hidráulicas</li>
-                        <li>Mangueras neumáticas</li>
-                        <li>Mangueras químicas</li>
-                        <li>Mangueras alimenticias</li>
-                        <li>Mangueras para abrasivos</li>
-                    </ul>
-                    <a href="mangueras-industriales.html?v=2" class="btn btn-primary">Ver Mangueras</a>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Inicio/Acoples.jpg" alt="Acoples y conectores industriales">
-                    <h3>Acoples y Conectores</h3>
-                    <p>Sistemas de conexión seguros, rápidos y duraderos para todas las aplicaciones industriales.</p>
-                    <ul>
-                        <li>Acoples rápidos</li>
-                        <li>Conectores roscados</li>
-                        <li>Terminales y adaptadores</li>
-                        <li>Abrazaderas industriales</li>
-                    </ul>
-                    <a href="acoples-rapidos.html?v=2" class="btn btn-primary">Ver Acoples</a>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Inicio/Valvula.jpg" alt="Válvulas industriales y control de fluidos">
-                    <h3>Válvulas y Control</h3>
-                    <p>Válvulas, manómetros y sistemas de control de presión y flujo para máxima seguridad.</p>
-                    <ul>
-                        <li>Válvulas de bola</li>
-                        <li>Válvulas de paso</li>
-                        <li>Manómetros de presión</li>
-                        <li>Sistemas de control</li>
-                    </ul>
-                    <a href="valvulas-industriales.html?v=2" class="btn btn-primary">Ver Válvulas</a>
-                </div>
+            <div class="section-head">
+                <span class="kicker">Líneas de producto</span>
+                <h2 class="section-title">Nuestras líneas principales</h2>
+                <p class="section-subtitle">Productos técnicos organizados por familia para elegir, comparar y cotizar con precisión.</p>
             </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="productos.html" class="btn btn-primary">Ver Todos los Productos</a>
+            <div class="lines-grid">
+                <a href="mangueras-industriales.html" class="line-card reveal">
+                    <div class="line-media"><img src="Imagenes/Productos/Mangueras Industriales.png" alt="Mangueras industriales"></div>
+                    <div class="line-body">
+                        <div class="line-index">Línea 01 — Conducción</div>
+                        <h3>Mangueras</h3>
+                        <p>Industriales, compuestas y plásticas para aire, agua, vapor, químicos, hidrocarburos y abrasivos.</p>
+                        <span class="line-go">Ver línea <i data-ic="arrow"></i></span>
+                    </div>
+                </a>
+                <a href="acoples-rapidos.html" class="line-card reveal">
+                    <div class="line-media"><img src="Imagenes/Productos/Neumatica-PNG.png" alt="Acoples y conectores"></div>
+                    <div class="line-body">
+                        <div class="line-index">Línea 02 — Conexión</div>
+                        <h3>Acoples</h3>
+                        <p>Rápidos a palanca, neumáticos, media vuelta y especiales de aluminio para transferencia segura.</p>
+                        <span class="line-go">Ver línea <i data-ic="arrow"></i></span>
+                    </div>
+                </a>
+                <a href="empaquetaduras-industriales.html" class="line-card reveal">
+                    <div class="line-media is-placeholder" style="background: repeating-linear-gradient(45deg,#eef2f4 0 11px,#e6ebee 11px 22px);">
+                        <i data-ic="shield" style="width:54px;height:54px;color:var(--steel);opacity:.8;"></i>
+                    </div>
+                    <div class="line-body">
+                        <div class="line-index">Línea 03 — Hermeticidad</div>
+                        <h3>Sellado</h3>
+                        <p>Empaquetaduras, materiales para juntas y textiles técnicos para alta temperatura y aislación.</p>
+                        <span class="line-go">Ver línea <i data-ic="arrow"></i></span>
+                    </div>
+                </a>
+                <a href="valvulas-industriales.html" class="line-card reveal">
+                    <div class="line-media"><img src="Imagenes/Productos/Valvula de Retencion.png" alt="Válvulas industriales"></div>
+                    <div class="line-body">
+                        <div class="line-index">Línea 04 — Control</div>
+                        <h3>Válvulas e instrumentos</h3>
+                        <p>Válvulas de bola, paso y retención, manómetros y termómetros para control de presión y flujo.</p>
+                        <span class="line-go">Ver línea <i data-ic="arrow"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align:center; margin-top: 2.75rem;">
+                <a href="productos.html" class="btn btn-outline">Ver catálogo completo <i data-ic="arrow"></i></a>
             </div>
         </div>
     </section>
 
+    <!-- Industrias -->
     <section class="bg-dark">
-        <div class="container" style="text-align: center;">
-            <h3>¿Necesitás una Cotización?</h3>
-            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker on-dark">Sectores atendidos</span>
+                <h2 class="section-title">Industrias que abastecemos</h2>
+                <p class="section-subtitle">Productos adecuados a las normas de seguridad y a las aplicaciones de cada rubro productivo.</p>
+            </div>
+            <div class="industry-grid">
+                <div class="industry"><i data-ic="wheat"></i><span>Alimenticia</span></div>
+                <div class="industry"><i data-ic="flask"></i><span>Química</span></div>
+                <div class="industry"><i data-ic="factory"></i><span>Petroquímica</span></div>
+                <div class="industry"><i data-ic="car"></i><span>Automotriz</span></div>
+                <div class="industry"><i data-ic="mountain"></i><span>Minería</span></div>
+                <div class="industry"><i data-ic="droplet"></i><span>Agroindustria</span></div>
+                <div class="industry"><i data-ic="hardhat"></i><span>Construcción</span></div>
+                <div class="industry"><i data-ic="cog"></i><span>Metalúrgica</span></div>
+                <div class="industry"><i data-ic="pill"></i><span>Farmacéutica</span></div>
             </div>
         </div>
     </section>
 
+    <!-- CTA final -->
+    <section class="bg-gray cta-section">
+        <div class="container">
+            <div class="cta-band">
+                <span class="kicker centered">Cotización sin compromiso</span>
+                <h2>Contanos qué necesitás conducir, controlar o sellar</h2>
+                <p>Nuestro equipo técnico te ayuda a definir el producto correcto y te responde con una cotización ágil.</p>
+                <div class="cta-actions">
+                    <a href="contacto.html" class="btn btn-primary">Solicitar cotización <i data-ic="arrow"></i></a>
+                    <a href="https://wa.me/5491141576110" target="_blank" rel="noopener" class="btn btn-whatsapp"><i data-ic="whatsapp"></i> Escribir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div>
-            <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;">
-                    <h4>Pana Fiul S.R.L</h4>
-                    <span style="color: #cbd5e1; margin-top: 1rem;">
-                        Soluciones industriales de calidad desde 2000. 
-                        Tu socio confiable en mangueras y accesorios.
-                    </span>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="empresa.html">La Empresa</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📞 +54 11 6080-9144</li>
-                        <li>📧 info@panafiul.com.ar</li>
-                        <li>📍 Buenos Aires, Argentina</li>
-                        <li>🕐 Lun-Vie: 10:00-16:00</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
     </footer>
 

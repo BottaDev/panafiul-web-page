@@ -3,72 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta Enviada - Pana Fiul S.R.L.</title>
+    <title>Consulta enviada — Pana Fiul S.R.L.</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Confirmación de consulta enviada a Pana Fiul S.R.L.">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-screen-label="Gracias">
+
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul id="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="empresa.html">La Empresa</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="bg-white" style="padding-top: 150px;">
-        <div class="container">
-            <div class="quote-panel">
-                <h1 style="color: #065f46; margin-bottom: 1rem;">Consulta enviada correctamente</h1>
-                <p>
-                    Gracias por contactarte con Pana Fiul S.R.L. Recibimos tu consulta
-                    <span data-product-name></span> y te responderemos a la brevedad.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="productos.html" class="btn btn-primary">Volver a productos</a>
-                    <a href="contacto.html" class="btn btn-outline">Enviar otra consulta</a>
-                </div>
+    <section class="bg-gray">
+        <div class="container container-narrow" style="text-align:center;">
+            <div style="width:72px;height:72px;border-radius:50%;background:var(--green-tint);color:var(--green-dark);display:grid;place-items:center;margin:0 auto 1.75rem;">
+                <i data-ic="check" style="width:36px;height:36px;"></i>
+            </div>
+            <span class="kicker centered">Consulta recibida</span>
+            <h1 class="section-title">¡Gracias por tu consulta!</h1>
+            <p class="section-subtitle" style="margin: 0 auto 2.25rem;">
+                Recibimos tu consulta<span data-product-name></span> y te responderemos a la brevedad, de lunes a viernes de 10 a 16 h. Si es urgente, escribinos por WhatsApp.
+            </p>
+            <div class="cta-actions">
+                <a href="productos.html" class="btn btn-primary">Volver a productos <i data-ic="arrow"></i></a>
+                <a href="https://wa.me/5491141576110" target="_blank" rel="noopener" class="btn btn-whatsapp"><i data-ic="whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <div>
-            <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;">
-                    <h4>Pana Fiul S.R.L.</h4>
-                    <span style="color: #cbd5e1; margin-top: 1rem;">Soluciones industriales para conducción, control y sellado de fluidos.</span>
-                </div>
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="empresa.html">La Empresa</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>+54 11 6080-9144</li>
-                        <li>info@panafiul.com.ar</li>
-                        <li>Buenos Aires, Argentina</li>
-                        <li>Lun-Vie: 10:00-16:00</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
     </footer>
 

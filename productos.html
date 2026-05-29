@@ -1,527 +1,389 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos Industriales - Pana Fiul S.R.L.</title>
-  <meta name="description" content="Catálogo web de mangueras industriales, acoples, sellados, textiles técnicos y válvulas. Páginas técnicas por categoría para cotizar según aplicación.">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .product-grid.product-grid-four {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .container.acoples-container {
-      max-width: 1580px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .product-image {
-      height: 200px;
-      background: linear-gradient(135deg, #334155 0%, #475569 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      position: relative;
-    }
-
-    .product-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.1);
-    }
-
-    .product-image span {
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-    }
-
-    .product-content {
-      padding: 2rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-category {
-      display: inline-block;
-      background: #dcfce7;
-      color: #10b981;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      width: fit-content;
-    }
-
-    .product-card h3 {
-      font-size: 1.5rem;
-      color: #334155;
-      margin-bottom: 0.75rem;
-      transition: color 0.3s;
-    }
-
-    .product-card:hover h3 {
-      color: #10b981;
-    }
-
-    .product-card .product-content > p {
-      color: #64748b;
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
-    }
-
-    .product-features {
-      list-style: none;
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .product-features li {
-      color: #64748b;
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      font-size: 0.95rem;
-    }
-
-    .product-features li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #10b981;
-      font-weight: bold;
-    }
-
-    .section-divider {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .section-divider h2 {
-      font-size: 2.5rem;
-      color: #334155;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-      padding: 0 2rem;
-      position: relative;
-    }
-
-    .section-divider h2::before,
-    .section-divider h2::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, #10b981);
-    }
-
-    .section-divider h2::before {
-      right: 100%;
-    }
-
-    .section-divider h2::after {
-      left: 100%;
-      background: linear-gradient(90deg, #10b981, transparent);
-    }
-
-    .section-divider p {
-      color: #64748b;
-      font-size: 1.2rem;
-    }
-
-    #mangueras {
-      padding-top: 2rem;
-    }
-
-    #mangueras .section-divider {
-      margin-top: 0;
-    }
-
-    @media (max-width: 1024px) {
-      .product-grid.product-grid-four {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 768px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-divider h2::before,
-      .section-divider h2::after {
-        width: 50px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Industriales — Pana Fiul S.R.L.</title>
+    <meta name="description" content="Catálogo de mangueras industriales, acoples, sellados, textiles técnicos y válvulas. Fichas técnicas por categoría para elegir, comparar y cotizar según la aplicación.">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav>
-        <ul id="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="empresa.html">La Empresa</a></li>
-          <li><a href="productos.html" class="active">Productos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body data-screen-label="Productos">
+
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Productos/banner.jpg');">
-    <div class="container">
-      <h1>Nuestros Productos</h1>
-      <p>Soluciones industriales organizadas por categoría para elegir, comparar y cotizar con precisión</p>
-    </div>
-  </div>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Mangueras Section -->
-  <section class="bg-gray anchor-target" id="mangueras">
-    <div class="container">
-      <div class="section-divider">
-        <h2 class="section-title">Mangueras Industriales</h2>
-        <p class="section-subtitle">Soluciones de transferencia para todo tipo de fluidos y aplicaciones industriales</p>
-      </div>
+    <!-- Hero -->
+    <section class="hero hero-page" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
+        <div class="container">
+            <span class="kicker on-dark">Catálogo técnico</span>
+            <h1>Productos para cada aplicación industrial</h1>
+            <p>Líneas organizadas por familia para elegir, comparar y cotizar con precisión según fluido, presión, temperatura y servicio.</p>
+        </div>
+    </section>
 
-      <div class="product-grid">
-        <!-- Mangueras Compuestas -->
-        <div class="product-card">
-          <div class="product-image product-image-photo">
-            <img src="Imagenes/Productos/Mangueras Compuestas.png" alt="Mangueras Compuestas">
-          </div>
-          <div class="product-content">
-            <h3>Mangueras Compuestas</h3>
-            <p>Alta resistencia química y mecánica para las aplicaciones más exigentes de la industria.</p>
-            <ul class="product-features">
-              <li>Resistencia a combustibles y químicos</li>
-              <li>Capas reforzadas con textil y alambre</li>
-              <li>Temperatura de trabajo: -40°C a +100°C</li>
-            </ul>
-            <div class="product-actions">
-              <a href="mangueras-compuestas.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- Nav de categorías -->
+    <nav class="category-nav" aria-label="Categorías de producto">
+        <div class="container">
+            <a href="#mangueras">Mangueras</a>
+            <a href="#acoples">Acoples</a>
+            <a href="#sellados">Sellados</a>
+            <a href="#textiles">Textiles técnicos</a>
+            <a href="#valvulas">Válvulas e instrumentos</a>
+        </div>
+    </nav>
+
+    <!-- Mangueras -->
+    <section class="bg-white anchor-target" id="mangueras">
+        <div class="container">
+            <div class="section-head section-divider">
+                <span class="kicker">Línea 01 — Conducción</span>
+                <h2 class="section-title">Mangueras</h2>
+                <p class="section-subtitle">Transferencia de fluidos para aire, agua, vapor, químicos, hidrocarburos y abrasivos.</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Mangueras Industriales -->
-        <div class="product-card">
-          <div class="product-image product-image-photo product-image-industrial">
-            <img src="Imagenes/Productos/Mangueras Industriales.png" alt="Mangueras Industriales">
-          </div>
-          <div class="product-content">
-            <h3>Mangueras Industriales</h3>
-            <p>Gran variedad para aplicaciones hidráulicas, neumáticas, vapor y agua bajo normas internacionales.</p>
-            <ul class="product-features">
-              <li>Hidráulicas de alta presión</li>
-              <li>Neumáticas y de aspiración</li>
-              <li>Para vapor y agua caliente</li>
-            </ul>
-            <div class="product-actions">
-              <a href="mangueras-industriales.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+            <div class="product-grid">
+                <article class="product-card reveal">
+                    <div class="product-image"><img src="Imagenes/Productos/Mangueras Compuestas.png" alt="Mangueras compuestas"></div>
+                    <div class="product-content">
+                        <span class="product-category">Mangueras</span>
+                        <h3>Mangueras Compuestas</h3>
+                        <p>Alta resistencia química y mecánica para las aplicaciones más exigentes de transferencia.</p>
+                        <ul class="product-features">
+                            <li>Resistencia a combustibles y químicos</li>
+                            <li>Capas reforzadas con textil y alambre</li>
+                            <li>Servicio de -40 °C a +100 °C</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="mangueras-compuestas.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=mangueras-compuestas" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image"><img src="Imagenes/Productos/Mangueras Industriales.png" alt="Mangueras industriales"></div>
+                    <div class="product-content">
+                        <span class="product-category">Mangueras</span>
+                        <h3>Mangueras Industriales</h3>
+                        <p>Amplia gama para aplicaciones hidráulicas, neumáticas, vapor y agua bajo normas internacionales.</p>
+                        <ul class="product-features">
+                            <li>Hidráulicas de alta presión</li>
+                            <li>Neumáticas y de aspiración</li>
+                            <li>Para vapor y agua caliente</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="mangueras-industriales.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=mangueras-industriales" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="droplet"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Mangueras</span>
+                        <h3>Mangueras Plásticas</h3>
+                        <p>Livianas, flexibles y resistentes. En PVC, poliuretano y polímeros especializados.</p>
+                        <ul class="product-features">
+                            <li>PVC transparente y reforzado</li>
+                            <li>Poliuretano para abrasión</li>
+                            <li>Alimentarias y sanitarias</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="mangueras-plasticas.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=mangueras-plasticas" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Mangueras Plásticas -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>🌊</span>
-          </div>
-          <div class="product-content">
-            <h3>Mangueras Plásticas</h3>
-            <p>Livianas, flexibles y resistentes. Fabricadas en PVC, poliuretano y otros polímeros especializados.</p>
-            <ul class="product-features">
-              <li>PVC transparente y reforzado</li>
-              <li>Poliuretano para abrasión</li>
-              <li>Alimentarias y sanitarias</li>
-              <li>Múltiples diámetros en stock</li>
-            </ul>
-            <div class="product-actions">
-              <a href="mangueras-plasticas.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- Acoples -->
+    <section class="bg-gray anchor-target" id="acoples">
+        <div class="container">
+            <div class="section-head section-divider">
+                <span class="kicker">Línea 02 — Conexión</span>
+                <h2 class="section-title">Acoples y conectores</h2>
+                <p class="section-subtitle">Conexiones seguras y eficientes para sistemas hidráulicos y neumáticos.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Acoples Section -->
-  <section class="anchor-target" id="acoples">
-    <div class="container acoples-container">
-      <div class="section-divider">
-        <h2>Acoples y Conectores</h2>
-        <p>Conexiones seguras y eficientes para sistemas hidráulicos y neumáticos</p>
-      </div>
-
-      <div class="product-grid product-grid-four">
-        <!-- Acoples Rápidos y Accesorios -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>🔌</span>
-          </div>
-          <div class="product-content">
-            <h3>Acoples Rápidos a Palanca</h3>
-            <p>Conectores de acción rápida para montaje y desmontaje eficiente en sistemas de fluidos.</p>
-            <ul class="product-features">
-              <li>Tipo Camlock</li>
-              <li>Aluminio, acero inoxidable, bronce y polipropileno</li>
-              <li>Sellado hermético</li>
-            </ul>
-            <div class="product-actions">
-              <a href="acoples-rapidos.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+            <div class="product-grid product-grid-four">
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="link"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                        <span class="product-tag">Camlock</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Acoples</span>
+                        <h3>Rápidos a Palanca</h3>
+                        <p>Conectores tipo Camlock de acción rápida para montaje y desmontaje eficiente.</p>
+                        <ul class="product-features">
+                            <li>Aluminio, inox, bronce y PP</li>
+                            <li>Sellado hermético</li>
+                            <li>Medidas de 1/2" a 6"</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="acoples-rapidos.html" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <a href="contacto.html?producto=acoples-rapidos" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image"><img src="Imagenes/Productos/Neumatica-PNG.png" alt="Acoples rápidos neumáticos"></div>
+                    <div class="product-content">
+                        <span class="product-category">Acoples</span>
+                        <h3>Rápidos Neumáticos</h3>
+                        <p>Conexiones especializadas para sistemas neumáticos industriales de alta eficiencia.</p>
+                        <ul class="product-features">
+                            <li>Conexión instantánea</li>
+                            <li>Diseño ergonómico</li>
+                            <li>Bajo mantenimiento</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="acoples-neumaticos.html" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <a href="contacto.html?producto=acoples-neumaticos" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="cog"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Acoples</span>
+                        <h3>Media Vuelta</h3>
+                        <p>Conexión rápida con rosca de media vuelta y sistema de seguridad incorporado.</p>
+                        <ul class="product-features">
+                            <li>Conexión / desconexión rápida</li>
+                            <li>Resistente a vibraciones</li>
+                            <li>Múltiples configuraciones</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="acoples-media-vuelta.html" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <a href="contacto.html?producto=acoples-media-vuelta" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="link"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                        <span class="product-tag">Aluminio</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Acoples</span>
+                        <h3>Especiales de Aluminio</h3>
+                        <p>Conectores livianos de aluminio para aplicaciones de bajo peso y alta resistencia.</p>
+                        <ul class="product-features">
+                            <li>Liviano y anticorrosivo</li>
+                            <li>Ideal para transporte</li>
+                            <li>Diversos tamaños</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="acoples-especiales-aluminio.html" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <a href="contacto.html?producto=acoples-especiales-aluminio" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Acoples Rápidos Neumáticos -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>💨</span>
-          </div>
-          <div class="product-content">
-            <h3>Acoples Rápidos Neumáticos</h3>
-            <p>Conexiones especializadas para sistemas neumáticos industriales de alta eficiencia.</p>
-            <ul class="product-features">
-              <li>Diseño ergonómico</li>
-              <li>Bajo mantenimiento</li>
-              <li>Alta durabilidad</li>
-              <li>Conexión instantánea</li>
-            </ul>
-            <div class="product-actions">
-              <a href="acoples-neumaticos.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- Sellados -->
+    <section class="bg-white anchor-target" id="sellados">
+        <div class="container">
+            <div class="section-head section-divider">
+                <span class="kicker">Línea 03 — Hermeticidad</span>
+                <h2 class="section-title">Sellados y componentes</h2>
+                <p class="section-subtitle">Elementos de sellado de precisión para garantizar la hermeticidad de tus sistemas.</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Acoples Media Vuelta -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>🔄</span>
-          </div>
-          <div class="product-content">
-            <h3>Acoples Media Vuelta</h3>
-            <p>Sistemas de conexión rápida con rosca de media vuelta para aplicaciones industriales.</p>
-            <ul class="product-features">
-              <li>Conexión/desconexión rápida</li>
-              <li>Sistema de seguridad incorporado</li>
-              <li>Resistente a vibraciones</li>
-              <li>Múltiples configuraciones</li>
-            </ul>
-            <div class="product-actions">
-              <a href="acoples-media-vuelta.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+            <div class="product-grid">
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="shield"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Sellados</span>
+                        <h3>Empaquetaduras</h3>
+                        <p>Para válvulas, bombas y equipos rotativos industriales. Grafito, teflón y aramida.</p>
+                        <ul class="product-features">
+                            <li>Alta resistencia térmica</li>
+                            <li>Bajo coeficiente de fricción</li>
+                            <li>Múltiples aplicaciones</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="empaquetaduras-industriales.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=empaquetaduras-industriales" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="seal"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Sellados</span>
+                        <h3>Materiales para Juntas</h3>
+                        <p>En planchas de distinto espesor, también cortadas según plano y especificaciones del cliente.</p>
+                        <ul class="product-features">
+                            <li>Alta y baja presión</li>
+                            <li>Resistencia química y térmica</li>
+                            <li>Corte a medida</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="juntas-de-sellado.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=juntas-de-sellado" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Acoples Especiales de Aluminio -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>✨</span>
-          </div>
-          <div class="product-content">
-            <h3>Acoples Especiales de Aluminio</h3>
-            <p>Conectores livianos de aluminio para aplicaciones que requieren bajo peso y alta resistencia.</p>
-            <ul class="product-features">
-              <li>Material liviano y resistente</li>
-              <li>Anticorrosivo</li>
-              <li>Ideal para transporte</li>
-              <li>Diversos tamaños disponibles</li>
-            </ul>
-            <div class="product-actions">
-              <a href="acoples-especiales-aluminio.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- Textiles -->
+    <section class="bg-gray anchor-target" id="textiles">
+        <div class="container">
+            <div class="section-head section-divider">
+                <span class="kicker">Línea 04 — Aislación</span>
+                <h2 class="section-title">Textiles técnicos</h2>
+                <p class="section-subtitle">Materiales textiles para sellado, aislamiento y refuerzo en aplicaciones de alta temperatura.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sellados Section -->
-  <section class="bg-gray anchor-target" id="sellados">
-    <div class="container">
-      <div class="section-divider">
-        <h2>Sellados y Componentes</h2>
-        <p>Elementos de sellado de precisión para garantizar la hermeticidad de tus sistemas</p>
-      </div>
-
-      <div class="product-grid">
-        <!-- Empaquetaduras -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>📦</span>
-          </div>
-          <div class="product-content">
-            <h3>Empaquetaduras</h3>
-            <p>Amplia gama de empaquetaduras para válvulas, bombas y equipos rotativos industriales.</p>
-            <ul class="product-features">
-              <li>Grafito, teflón y aramida</li>
-              <li>Alta resistencia térmica</li>
-              <li>Bajo coeficiente de fricción</li>
-              <li>Múltiples aplicaciones</li>
-            </ul>
-            <div class="product-actions">
-              <a href="empaquetaduras-industriales.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+            <div class="product-grid">
+                <article class="product-card reveal">
+                    <div class="product-image is-placeholder">
+                        <i class="ph-icon" data-ic="weave"></i>
+                        <span class="ph-label">Imagen del producto</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Textiles</span>
+                        <h3>Telas para Altas Temperaturas</h3>
+                        <p>Materiales textiles técnicos para sellado, aislamiento térmico y refuerzo industrial.</p>
+                        <ul class="product-features">
+                            <li>Fibras de alta temperatura</li>
+                            <li>Tejidos reforzados</li>
+                            <li>Cintas y cordones</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="textiles-industriales.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=textiles-industriales" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Juntas de Sellado -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>⭕</span>
-          </div>
-          <div class="product-content">
-            <h3>Materiales para Juntas de Sellado</h3>
-            <p>En planchas de distinto espesor, también cortadas según plano y especificaciones del cliente.</p>
-            <ul class="product-features">
-              <li>Alta y baja presión</li>
-              <li>Resistencia química y térmica</li>
-            </ul>
-            <div class="product-actions">
-              <a href="juntas-de-sellado.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- Válvulas -->
+    <section class="bg-white anchor-target" id="valvulas">
+        <div class="container">
+            <div class="section-head section-divider">
+                <span class="kicker">Línea 05 — Control</span>
+                <h2 class="section-title">Válvulas e instrumentos</h2>
+                <p class="section-subtitle">Válvulas, manómetros y termómetros para control de presión y flujo con máxima seguridad.</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Textiles -->
-        <div class="product-card">
-          <div class="product-image">
-            <span>🧵</span>
-          </div>
-          <div class="product-content">
-            <h3>Telas Industriales para Altas Temperaturas y Aislación Térmica</h3>
-            <p>Materiales textiles técnicos para sellado, aislamiento y refuerzo en aplicaciones industriales.</p>
-            <ul class="product-features">
-              <li>Fibras de alta temperatura</li>
-              <li>Tejidos reforzados</li>
-              <li>Cintas y cordones</li>
-              <li>Resistencia mecánica superior</li>
-            </ul>
-            <div class="product-actions">
-              <a href="textiles-industriales.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+            <div class="product-grid">
+                <article class="product-card reveal">
+                    <div class="product-image"><img src="Imagenes/Productos/Valvula de Retencion.png" alt="Válvulas industriales"></div>
+                    <div class="product-content">
+                        <span class="product-category">Válvulas</span>
+                        <h3>Válvulas Industriales</h3>
+                        <p>De bola, paso y retención, más manómetros y termómetros para conducción segura de fluidos.</p>
+                        <ul class="product-features">
+                            <li>Selección por fluido, presión y temperatura</li>
+                            <li>Roscadas, bridadas o especiales</li>
+                            <li>Manómetros y componentes de control</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="valvulas-industriales.html" class="btn btn-primary btn-sm">Ver ficha técnica</a>
+                            <a href="contacto.html?producto=valvulas-industriales" class="btn btn-outline btn-sm">Consultar</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Válvulas Section -->
-  <section class="anchor-target" id="valvulas">
-    <div class="container">
-      <div class="section-divider">
-        <h2>Válvulas Industriales y Control</h2>
-        <p>Separadas como categoría propia para búsquedas y campañas de válvulas, manómetros y control de flujo</p>
-      </div>
-
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <span>⚙️</span>
-          </div>
-          <div class="product-content">
-            <h3>Válvulas Industriales</h3>
-            <p>Válvulas de bola, paso, retención y accesorios de control para conducción segura de fluidos industriales.</p>
-            <ul class="product-features">
-              <li>Selección por fluido, presión y temperatura</li>
-              <li>Configuraciones roscadas, bridadas o especiales</li>
-              <li>Manómetros y componentes de control</li>
-            </ul>
-            <div class="product-actions">
-              <a href="valvulas-industriales.html?v=2" class="btn btn-primary">Ver ficha técnica</a>
+    <!-- CTA -->
+    <section class="bg-dark cta-section">
+        <div class="container">
+            <div class="cta-band">
+                <span class="kicker on-dark centered">¿No encontrás lo que buscás?</span>
+                <h2>Contanos tu aplicación y la resolvemos</h2>
+                <p>Te asesoramos para seleccionar el producto correcto y te enviamos una cotización ágil.</p>
+                <div class="cta-actions">
+                    <a href="contacto.html" class="btn btn-primary">Solicitar cotización <i data-ic="arrow"></i></a>
+                    <a href="https://wa.me/5491141576110" target="_blank" rel="noopener" class="btn btn-whatsapp"><i data-ic="whatsapp"></i> WhatsApp</a>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="bg-dark">
-    <div class="container" style="text-align: center;">
-      <h3>¿Necesitás una Cotización?</h3>
-      <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-        <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div>
-      <div class="footer-content">
-        <div class="footer-section" style="width: 400px !important;">
-          <h4>Pana Fiul S.R.L.</h4>
-          <span style="color: #cbd5e1; margin-top: 1rem;">
-            Soluciones industriales de calidad desde 2000.
-            Tu socio confiable en mangueras y accesorios.
-          </span>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="footer-section">
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="empresa.html">La Empresa</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
+    </footer>
 
-        <div class="footer-section">
-          <h4>Contacto</h4>
-          <ul>
-            <li>📞 +54 11 6080-9144</li>
-            <li>📧 info@panafiul.com.ar</li>
-            <li>📍 Buenos Aires, Argentina</li>
-            <li>🕐 Lun-Vie: 10:00-16:00</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

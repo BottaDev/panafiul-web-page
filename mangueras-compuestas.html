@@ -6,200 +6,43 @@
     <title>Mangueras Compuestas - Pana Fiul S.R.L.</title>
     <meta name="description" content="Mangueras compuestas para transferencia de combustibles, químicos e hidrocarburos. Compatibilidad, aplicaciones y cotización técnica.">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .technical-hero {
-            padding: 86px 2rem 58px;
-        }
-
-        .technical-hero h1 {
-            font-size: 2.55rem;
-        }
-
-        .technical-hero p {
-            font-size: 1.15rem;
-            margin-bottom: 0;
-        }
-
-        .detail-section {
-            padding: 3.5rem 2rem;
-        }
-
-        .detail-section .section-title {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .detail-intro .landing-intro {
-            gap: 1.5rem;
-            grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
-            margin-top: 1.4rem;
-        }
-
-        .detail-intro .lead-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .detail-intro .feature-panel {
-            padding: 1.25rem;
-        }
-
-        .detail-intro .feature-panel li {
-            margin: 0.55rem 0;
-        }
-
-        .catalog-section .spec-table-wrapper {
-            margin-top: 1.25rem;
-        }
-
-        .catalog-section .spec-table {
-            min-width: 680px;
-        }
-
-        .catalog-section .spec-table th,
-        .catalog-section .spec-table td {
-            padding: 0.8rem 0.9rem;
-        }
-
-        .related-section {
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            padding: 2.25rem 2rem;
-        }
-
-        .related-header {
-            align-items: flex-end;
-            display: flex;
-            gap: 1rem;
-            justify-content: space-between;
-            margin-bottom: 1.2rem;
-        }
-
-        .related-heading {
-            color: #334155;
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin: 0;
-        }
-
-        .related-note {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin: 0;
-            text-align: right;
-        }
-
-        .related-products {
-            display: grid;
-            gap: 0.75rem;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            margin: 0;
-        }
-
-        .related-product {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            color: #334155;
-            display: grid;
-            grid-template-columns: 64px 1fr;
-            min-height: 64px;
-            overflow: hidden;
-            text-align: left;
-            text-decoration: none;
-            transition: border-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .related-product:hover {
-            border-color: #10b981;
-            transform: translateY(-2px);
-        }
-
-        .related-product-image {
-            align-items: center;
-            background: #f8fafc;
-            display: flex;
-            height: 64px;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .related-product-image img {
-            display: block;
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        .related-product-icon {
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        .related-product-title {
-            align-items: center;
-            display: flex;
-            font-size: 0.92rem;
-            font-weight: 700;
-            line-height: 1.25;
-            padding: 0.65rem 0.85rem;
-        }
-
-        .cta-section {
-            padding: 3rem 2rem;
-        }
-
-        @media (max-width: 760px) {
-            .technical-hero {
-                padding: 74px 1.25rem 48px;
-            }
-
-            .technical-hero h1 {
-                font-size: 2rem;
-            }
-
-            .detail-section {
-                padding: 2.75rem 1.25rem;
-            }
-
-            .related-header {
-                align-items: stretch;
-                flex-direction: column;
-                gap: 0.4rem;
-            }
-
-            .related-note {
-                text-align: left;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .related-products {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
-<body>
+<body data-screen-label="Mangueras Compuestas">
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul id="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="empresa.html">La Empresa</a></li>
                     <li><a href="productos.html" class="active">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="hero technical-hero" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
+    <div class="hero hero-page" style="--hero-banner: url('Imagenes/Productos/banner.jpg');">
         <div class="container">
-            <h1>Nuestros Productos</h1>
-            <p>Soluciones industriales organizadas por categoría para elegir, comparar y cotizar con precisión</p>
+            <span class="kicker on-dark">Ficha técnica</span>
+            <h1>Mangueras Compuestas</h1>
+            <p>Selección según fluido, presión, temperatura, diámetro y tipo de servicio.</p>
         </div>
     </div>
 
@@ -217,8 +60,9 @@
                     <p class="note">
                         El catálogo completo incluye dimensiones, códigos, variantes de alambre y aplicaciones recomendadas por línea.
                     </p>
-                    <div class="product-actions" style="margin-top: 1.5rem;">
-                        <a href="PDF/Mangueras/MANGUERAS-COMPUESTAS.pdf" class="btn btn-primary" target="_blank" rel="noopener">Descargar PDF</a>
+                    <div class="product-actions" style="margin-top: 1.75rem;">
+                        <a href="contacto.html?producto=mangueras-compuestas" class="btn btn-primary">Solicitar cotización <i data-ic="arrow"></i></a>
+                        <a href="PDF/Mangueras/MANGUERAS-COMPUESTAS.pdf" class="btn btn-outline" target="_blank" rel="noopener"><i data-ic="download"></i> Descargar PDF</a>
                     </div>
                 </div>
                 <div class="feature-panel">
@@ -298,64 +142,64 @@
                 </a>
 
                 <a href="mangueras-plasticas.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">🌊</span>
+                    <div class="related-product-image">
+                        <i data-ic="droplet"></i>
                     </div>
                     <div class="related-product-title">Mangueras Plásticas</div>
                 </a>
 
                 <a href="acoples-rapidos.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">🔌</span>
+                    <div class="related-product-image">
+                        <i data-ic="link"></i>
                     </div>
                     <div class="related-product-title">Acoples Rápidos a Palanca</div>
                 </a>
 
                 <a href="acoples-neumaticos.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">💨</span>
+                    <div class="related-product-image">
+                        <i data-ic="bolt"></i>
                     </div>
                     <div class="related-product-title">Acoples Rápidos Neumáticos</div>
                 </a>
 
                 <a href="acoples-media-vuelta.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">🔄</span>
+                    <div class="related-product-image">
+                        <i data-ic="cog"></i>
                     </div>
                     <div class="related-product-title">Acoples Media Vuelta</div>
                 </a>
 
                 <a href="acoples-especiales-aluminio.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">✨</span>
+                    <div class="related-product-image">
+                        <i data-ic="link"></i>
                     </div>
                     <div class="related-product-title">Acoples Especiales de Aluminio</div>
                 </a>
 
                 <a href="empaquetaduras-industriales.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">📦</span>
+                    <div class="related-product-image">
+                        <i data-ic="box"></i>
                     </div>
                     <div class="related-product-title">Empaquetaduras</div>
                 </a>
 
                 <a href="juntas-de-sellado.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">⭕</span>
+                    <div class="related-product-image">
+                        <i data-ic="seal"></i>
                     </div>
                     <div class="related-product-title">Materiales para Juntas de Sellado</div>
                 </a>
 
                 <a href="textiles-industriales.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">🧵</span>
+                    <div class="related-product-image">
+                        <i data-ic="weave"></i>
                     </div>
                     <div class="related-product-title">Telas Industriales para Altas Temperaturas</div>
                 </a>
 
                 <a href="valvulas-industriales.html?v=2" class="related-product">
-                    <div class="related-product-image product-image">
-                        <span class="related-product-icon">⚙️</span>
+                    <div class="related-product-image">
+                        <i data-ic="gauge"></i>
                     </div>
                     <div class="related-product-title">Válvulas Industriales</div>
                 </a>
@@ -374,34 +218,36 @@
     </section>
 
     <footer>
-        <div>
-            <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;">
-                    <h4>Pana Fiul S.R.L.</h4>
-                    <span style="color: #cbd5e1; margin-top: 1rem;">Soluciones industriales para conducción, control y sellado de fluidos.</span>
-                </div>
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="empresa.html">La Empresa</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>+54 11 6080-9144</li>
-                        <li>info@panafiul.com.ar</li>
-                        <li>Buenos Aires, Argentina</li>
-                        <li>Lun-Vie: 10:00-16:00</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
     </footer>
 

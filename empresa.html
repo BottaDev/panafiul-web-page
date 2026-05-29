@@ -3,291 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Empresa - Pana Fiul S.R.L.</title>
-    <meta name="description" content="Pana Fiul S.R.L. provee soluciones industriales para conducción, control y sellado de fluidos en sectores alimenticio, químico, petroquímico, automotriz y más.">
+    <title>La Empresa — Pana Fiul S.R.L.</title>
+    <meta name="description" content="Pana Fiul S.R.L. provee soluciones integrales para conducción, control y sellado de fluidos, con asesoramiento técnico y abastecimiento para múltiples industrias argentinas.">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos específicos para valores */
-        .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .valor-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: all 0.3s ease;
-            border-top: 4px solid #10b981;
-        }
-
-        .valor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
-        }
-
-        .valor-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .valor-card h3 {
-            color: #334155;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .valor-card p {
-            color: #475569;
-            line-height: 1.6;
-        }
-
-        /* Estilos para imágenes de sectores: ajustar para que encajen en el contenedor */
-        .sector-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-            margin: 0 0 1.5rem 0;
-            display: block;
-        }
-
-        /* Estilos específicos para texto de Quiénes Somos */
-        .intro-text-primary {
-            font-size: 1.15rem;
-            color: #10b981;
-            line-height: 1.8;
-            text-align: justify;
-            margin-bottom: 1.5rem;
-        }
-
-        .intro-text-secondary {
-            font-size: 1.1rem;
-            color: #475569;
-            line-height: 1.8;
-            text-align: justify;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Títulos de sectores */
-        .sector-title {
-            color: #334155;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .valores-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Header -->
+<body data-screen-label="Empresa">
+
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tag">Conducción · Control · Sellado de fluidos</span>
+            <div class="topbar-links">
+                <a class="topbar-item" href="tel:+541160809144"><i data-ic="phone"></i> +54 11 6080-9144</a>
+                <a class="topbar-item" href="mailto:ventas@panafiul.com.ar"><i data-ic="mail"></i> ventas@panafiul.com.ar</a>
+                <a class="topbar-item" href="https://wa.me/5491141576110" target="_blank" rel="noopener"><i data-ic="whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">Pana Fiul S.R.L.</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i data-ic="droplet"></i></span>
+                <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul id="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="empresa.html" class="active">La Empresa</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary btn-sm nav-cta">Solicitar cotización</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero" style="padding: 100px 2rem 80px; --hero-banner: url('Imagenes/Empresa/banner.jpg');">
+    <!-- Hero -->
+    <section class="hero hero-page" style="--hero-banner: url('Imagenes/Empresa/banner.jpg');">
         <div class="container">
-            <h1>La Empresa</h1>
-            <p>Soluciones integrales para la industria argentina</p>
+            <span class="kicker on-dark">La Empresa</span>
+            <h1>Un socio industrial confiable, con trayectoria</h1>
+            <p>Desarrollamos servicios para la industria y proveemos productos para la conducción, control y sellado de fluidos, adecuados a las normas y usos de cada rubro.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Quiénes Somos -->
+    <!-- Quiénes somos -->
     <section class="bg-white">
         <div class="container">
-            <h2 class="section-title">Quiénes Somos</h2>
-            <div style="max-width: 900px; margin: 2rem auto;">
-                <p class="intro-text-primary">
-                    <strong>PANAFIUL S.R.L.</strong> es una empresa dedicada a desarrollar <strong>SERVICIOS PARA LA INDUSTRIA</strong> 
-                    y a <strong>PROVEER</strong> productos para la <strong>CONDUCCIÓN, CONTROL Y SELLADO DE FLUIDOS.</strong>
-                </p>
-                
-                <p class="intro-text-secondary">
-                    Nuestra propuesta es ofrecer un <strong>SERVICIO INTEGRAL DE SOLUCIONES</strong> para el Departamento de Compras, 
-                    aligerando el tiempo que les ocupa buscar cada material en distintos rubros, concentrando varios productos 
-                    en un mismo proveedor, a fin de obtener compatibilidad entre las diferentes mercaderías y reducir costos 
-                    asociados a procesos administrativos, traslados, fletes y tiempos de entrega.
-                </p>
-
-                <p class="intro-text-secondary">
-                    Nuestros productos están construidos especialmente adecuándose a las <strong>Normas de Seguridad</strong> 
-                    y a los usos y aplicaciones de <strong>CADA INDUSTRIA EN PARTICULAR</strong>.
-                </p>
+            <div class="about-grid">
+                <div>
+                    <span class="kicker">Quiénes somos</span>
+                    <p class="about-lead"><strong>Pana Fiul S.R.L.</strong> es una empresa dedicada a desarrollar servicios para la industria y a proveer productos para la <strong>conducción, control y sellado de fluidos</strong>.</p>
+                    <div class="about-body">
+                        <p>Nuestra propuesta es ofrecer un <strong>servicio integral de soluciones</strong> para el departamento de compras, aligerando el tiempo que ocupa buscar cada material en distintos rubros: concentramos varios productos en un mismo proveedor para obtener compatibilidad entre mercaderías y reducir costos administrativos, traslados, fletes y tiempos de entrega.</p>
+                        <p>Nuestros productos están construidos adecuándose a las <strong>normas de seguridad</strong> y a los usos y aplicaciones de cada industria en particular.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="productos.html" class="btn btn-primary">Ver productos <i data-ic="arrow"></i></a>
+                    </div>
+                </div>
+                <aside class="about-aside">
+                    <span class="kicker">En números</span>
+                    <h3>Pana Fiul en cifras</h3>
+                    <div class="about-stat"><span class="n">20+</span><span class="t">Años abasteciendo a la industria argentina</span></div>
+                    <div class="about-stat"><span class="n">11</span><span class="t">Líneas de producto técnicas</span></div>
+                    <div class="about-stat"><span class="n">9</span><span class="t">Sectores industriales atendidos</span></div>
+                    <div class="about-stat"><span class="n">1</span><span class="t">Proveedor integral para tus compras</span></div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- Nuestros Valores -->
+    <!-- Valores -->
     <section class="bg-gray">
         <div class="container">
-            <h2 class="section-title">Nuestros Valores</h2>
-            <p class="section-subtitle">Los pilares que guían nuestro trabajo diario</p>
-            
-            <div class="valores-grid">
-                <div class="valor-card">
-                    <div class="valor-icon">🎯</div>
+            <div class="section-head">
+                <span class="kicker">Nuestros valores</span>
+                <h2 class="section-title">Los pilares de nuestro trabajo</h2>
+                <p class="section-subtitle">Principios que guían cada relación comercial y cada solución que entregamos.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-card reveal">
+                    <div class="icon-box"><i data-ic="target"></i></div>
                     <h3>Compromiso</h3>
-                    <p>Nos comprometemos con la satisfacción de nuestros clientes, ofreciendo productos que cumplen con los más altos estándares de calidad y seguridad.</p>
+                    <p>Nos comprometemos con la satisfacción del cliente, con productos que cumplen altos estándares de calidad y seguridad.</p>
                 </div>
-
-                <div class="valor-card">
-                    <div class="valor-icon">🔧</div>
+                <div class="value-card reveal">
+                    <div class="icon-box"><i data-ic="award"></i></div>
                     <h3>Experiencia</h3>
-                    <p>Años de trayectoria nos permiten brindar asesoramiento técnico especializado a nuestros clientes y soluciones precisas para cada industria.</p>
+                    <p>Años de trayectoria nos permiten brindar asesoramiento técnico especializado y soluciones precisas para cada industria.</p>
                 </div>
-
-                <div class="valor-card">
-                    <div class="valor-icon">🤝</div>
+                <div class="value-card reveal">
+                    <div class="icon-box"><i data-ic="handshake"></i></div>
                     <h3>Confianza</h3>
-                    <p>Construimos relaciones de largo plazo basadas en la transparencia, la calidad de nuestros productos y el cumplimiento de nuestros compromisos.</p>
+                    <p>Construimos relaciones de largo plazo basadas en la transparencia, la calidad y el cumplimiento de nuestros compromisos.</p>
                 </div>
-
-                <div class="valor-card">
-                    <div class="valor-icon">💡</div>
+                <div class="value-card reveal">
+                    <div class="icon-box"><i data-ic="bulb"></i></div>
                     <h3>Innovación</h3>
-                    <p>Incorporamos constantemente nuevos productos y tecnologías para ofrecer soluciones actualizadas y eficientes a las demandas del mercado.</p>
+                    <p>Incorporamos nuevos productos y tecnologías para ofrecer soluciones actualizadas y eficientes a las demandas del mercado.</p>
                 </div>
-
-                <div class="valor-card">
-                    <div class="valor-icon">✅</div>
+                <div class="value-card reveal">
+                    <div class="icon-box"><i data-ic="shield"></i></div>
                     <h3>Calidad</h3>
-                    <p>Trabajamos solo con los mejores proveedores y garantizamos productos que cumplen con todas las normativas de seguridad vigentes.</p>
+                    <p>Trabajamos con los mejores proveedores y garantizamos productos que cumplen las normativas de seguridad vigentes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sectores que Atendemos -->
-    <section class="bg-white">
+    <!-- Sectores -->
+    <section class="bg-dark">
         <div class="container">
-            <h2 class="section-title">Sectores Industriales que Atendemos</h2>
-            <p class="section-subtitle">Soluciones específicas para cada rubro</p>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <img src="Imagenes/Empresa/Alimenticia.jpg" alt="Industria Alimenticia" class="sector-image">
-                    <h3 class="sector-title">Industria Alimenticia</h3>
-                    <p>Mangueras y accesorios aptos para contacto con alimentos, certificados FDA y con todas las homologaciones sanitarias necesarias.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Quimica.jpg" alt="Industria Química" class="sector-image">
-                    <h3 class="sector-title">Industria Química</h3>
-                    <p>Productos resistentes a ácidos, bases, solventes y productos químicos agresivos, con alta durabilidad y seguridad.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Petroquimica.jpg" alt="Petroquímica" class="sector-image">
-                    <h3 class="sector-title">Petroquímica</h3>
-                    <p>Mangueras especializadas para hidrocarburos, altas presiones y temperaturas extremas, cumpliendo normativas internacionales.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Automotriz.jpg" alt="Automotriz" class="sector-image">
-                    <h3 class="sector-title">Automotriz</h3>
-                    <p>Componentes para sistemas hidráulicos, refrigeración, combustible y aire en talleres mecánicos y plantas de producción.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Mineria.jpg" alt="Minería" class="sector-image">
-                    <h3 class="sector-title">Minería</h3>
-                    <p>Equipamiento ultra resistente para condiciones extremas de trabajo, abrasión, presión y ambientes hostiles.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Agroindustria.jpg" alt="Agroindustria" class="sector-image">
-                    <h3 class="sector-title">Agroindustria</h3>
-                    <p>Soluciones para riego, pulverización, transporte de granos, fertilizantes y productos agrícolas diversos.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Construccion.jpg" alt="Construcción" class="sector-image">
-                    <h3 class="sector-title">Construcción</h3>
-                    <p>Mangueras para hormigoneras, compresores, herramientas neumáticas y sistemas hidráulicos de maquinaria pesada.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Metalurgica.jpg" alt="Metalúrgica" class="sector-image">
-                    <h3 class="sector-title">Metalúrgica</h3>
-                    <p>Productos resistentes a altas temperaturas, aceites industriales y condiciones severas de trabajo continuo.</p>
-                </div>
-
-                <div class="card">
-                    <img src="Imagenes/Empresa/Farmaceutica.jpg" alt="Farmacéutica" class="sector-image">
-                    <h3 class="sector-title">Farmacéutica</h3>
-                    <p>Materiales certificados para ambientes controlados, esterilizables y con trazabilidad completa de fabricación.</p>
-                </div>
+            <div class="section-head">
+                <span class="kicker on-dark">Sectores que atendemos</span>
+                <h2 class="section-title">Soluciones específicas para cada rubro</h2>
+                <p class="section-subtitle">Productos seleccionados según las exigencias de seguridad y operación de cada industria.</p>
+            </div>
+            <div class="industry-grid">
+                <div class="industry"><i data-ic="wheat"></i><span>Alimenticia</span></div>
+                <div class="industry"><i data-ic="flask"></i><span>Química</span></div>
+                <div class="industry"><i data-ic="factory"></i><span>Petroquímica</span></div>
+                <div class="industry"><i data-ic="car"></i><span>Automotriz</span></div>
+                <div class="industry"><i data-ic="mountain"></i><span>Minería</span></div>
+                <div class="industry"><i data-ic="droplet"></i><span>Agroindustria</span></div>
+                <div class="industry"><i data-ic="hardhat"></i><span>Construcción</span></div>
+                <div class="industry"><i data-ic="cog"></i><span>Metalúrgica</span></div>
+                <div class="industry"><i data-ic="pill"></i><span>Farmacéutica</span></div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="bg-dark">
-        <div class="container" style="text-align: center;">
-            <h3>¿Necesitás una Cotización?</h3>
-            <p>Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu industria</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-                <a href="contacto.html" class="btn btn-primary">Solicitar Cotización</a>
+    <section class="bg-gray cta-section">
+        <div class="container">
+            <div class="cta-band">
+                <span class="kicker centered">Trabajemos juntos</span>
+                <h2>Centralizá tus compras industriales con un solo aliado</h2>
+                <p>Te ayudamos a definir el producto correcto y a coordinar un abastecimiento ágil y compatible.</p>
+                <div class="cta-actions">
+                    <a href="contacto.html" class="btn btn-primary">Solicitar cotización <i data-ic="arrow"></i></a>
+                    <a href="productos.html" class="btn btn-secondary">Ver productos</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div>
-            <div class="footer-content">
-                <div class="footer-section" style="width: 400px !important;">
-                    <h4>Pana Fiul S.R.L.</h4>
-                    <span style="color: #cbd5e1; margin-top: 1rem;">
-                        Soluciones industriales de calidad desde 2000. 
-                        Tu socio confiable en mangueras y accesorios.
-                    </span>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="empresa.html">La Empresa</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📞 +54 11 6080-9144</li>
-                        <li>📧 info@panafiul.com.ar</li>
-                        <li>📍 Buenos Aires, Argentina</li>
-                        <li>🕐 Lun-Vie: 10:00-16:00</li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark"><i data-ic="droplet"></i></span>
+                    <span class="logo-text">Pana <span>Fiul</span><small>S.R.L. · Industrial</small></span>
+                </a>
+                <p>Soluciones integrales para la conducción, control y sellado de fluidos. Abasteciendo a la industria argentina desde el año 2000.</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pana Fiul S.R.L. Todos los derechos reservados.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diseñado para la industria argentina</p>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">La Empresa</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-ic="phone"></i> +54 11 6080-9144</li>
+                    <li><i data-ic="mail"></i> info@panafiul.com.ar</li>
+                    <li><i data-ic="pin"></i> Buenos Aires, Argentina</li>
+                    <li><i data-ic="clock"></i> Lun a Vie · 10 a 16 h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pana Fiul S.R.L. — Todos los derechos reservados.</p>
+            <p>Conducción · Control · Sellado de fluidos</p>
         </div>
     </footer>
 
