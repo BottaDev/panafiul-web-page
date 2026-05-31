@@ -13,8 +13,7 @@ const PRODUCT_LABELS = {
     'acoples-especiales-aluminio': 'Acoples especiales de aluminio',
     'empaquetaduras-industriales': 'Empaquetaduras industriales',
     'juntas-de-sellado': 'Materiales para juntas de sellado',
-    'textiles-industriales': 'Textiles industriales',
-    'valvulas-industriales': 'Válvulas industriales'
+    'textiles-industriales': 'Textiles industriales'
 };
 
 let emailJsReady = false;
