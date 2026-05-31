@@ -478,7 +478,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 /* ---- Industrias (chips de ícono) ---- */
 .industry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -486,27 +486,42 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   overflow: hidden;
 }
 .industry {
-  background: var(--bg);
-  padding: 1.85rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
   display: flex;
-  flex-direction: column;
-  gap: .9rem;
-  transition: background .2s var(--ease);
+  align-items: flex-end;
+  background: var(--graphite-2);
 }
-.industry:hover { background: var(--bg-soft); }
-.industry svg { width: 30px; height: 30px; color: var(--green-dark); stroke-width: 1.6; }
+.industry img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s var(--ease);
+}
+.industry::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(0,0,0,.1) 55%, transparent 100%);
+  pointer-events: none;
+}
+.industry:hover img { transform: scale(1.07); }
 .industry span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
   font-family: 'Archivo', sans-serif;
   font-weight: 700;
-  color: var(--ink);
-  font-size: 1.02rem;
+  font-size: .97rem;
   letter-spacing: -0.01em;
+  padding: .85rem 1rem;
+  width: 100%;
+  text-align: center;
 }
 .bg-dark .industry-grid { background: rgba(255, 255, 255, .09); border-color: rgba(255, 255, 255, .09); }
-.bg-dark .industry { background: var(--graphite-2); }
-.bg-dark .industry:hover { background: #2f3b45; }
-.bg-dark .industry span { color: #fff; }
-.bg-dark .industry svg { color: var(--green-bright); }
 
 /* ---- Catálogo de productos ---- */
 .category-nav {
