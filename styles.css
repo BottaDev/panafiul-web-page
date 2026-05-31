@@ -188,11 +188,11 @@ header.scrolled { box-shadow: 0 6px 26px rgba(18, 24, 29, .09); }
   display: block;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  font-size: .58rem;
-  letter-spacing: .26em;
+  font-size: .55rem;
+  letter-spacing: .04em;
   color: var(--muted);
-  text-transform: uppercase;
   margin-top: 3px;
+  white-space: nowrap;
 }
 .logo .logo-text { line-height: 1; }
 
