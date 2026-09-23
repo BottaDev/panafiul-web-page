@@ -174,27 +174,21 @@ header.scrolled { box-shadow: 0 6px 26px rgba(18, 24, 29, .09); }
 }
 
 .logo {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
-  font-size: 1.42rem;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
-.logo span { color: var(--green); }
-.logo small {
+.logo-img {
   display: block;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
-  font-size: .55rem;
-  letter-spacing: .04em;
-  color: var(--muted);
-  margin-top: 3px;
-  white-space: nowrap;
+  height: 48px;
+  width: auto;
+  transition: opacity .2s var(--ease);
 }
-.logo .logo-text { line-height: 1; }
+.logo:hover .logo-img { opacity: .8; }
+/* Variante monocromática blanca para fondos oscuros */
+.logo-img--light { filter: brightness(0) invert(1); opacity: .92; }
+.logo:hover .logo-img--light { opacity: 1; }
 
 nav ul { list-style: none; display: flex; align-items: center; gap: 2.1rem; }
 nav a {
@@ -906,8 +900,8 @@ footer {
   gap: 2.5rem;
   padding-bottom: 2.75rem;
 }
-.footer-brand .logo { color: #fff; margin-bottom: 1.1rem; }
-.footer-brand .logo small { color: var(--muted); }
+.footer-brand .logo { margin-bottom: 1.25rem; }
+.footer-brand .logo-img { height: 58px; }
 .footer-brand p { font-size: .95rem; color: #8c98a1; max-width: 38ch; }
 .footer-section h4 {
   color: #fff;
@@ -986,6 +980,8 @@ footer {
   .footer-content { grid-template-columns: 1fr; gap: 2rem; }
   .hero-stats { gap: 1.75rem 2.25rem; }
   .footer-bottom { flex-direction: column; }
+  .logo-img { height: 40px; }
+  .footer-brand .logo-img { height: 50px; }
 }
 
 @media (max-width: 560px) {
@@ -993,4 +989,5 @@ footer {
   .product-grid, .product-grid.product-grid-four { grid-template-columns: 1fr; }
   .related-products { grid-template-columns: 1fr; }
   .hero-stat .num { font-size: 1.9rem; }
+  .logo-img { height: 34px; }
 }
